@@ -1,0 +1,1 @@
+qwen code 初始化报错 RipgreRipgrep not available: spawn ││ /root/.qwen/updates/npm/86682c2ee49.ersions/0.24.6/node_modules/@qwen-code/qwen-code/vendor/ripgrep/x64-linux/rg ││ EACCES. Falling back to built-in grep. 如何修复
