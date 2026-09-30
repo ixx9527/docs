@@ -9,6 +9,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: '数独高级技巧', link: '/articles/sudoku-advanced-techniques' },
     ],
 
     socialLinks: [
