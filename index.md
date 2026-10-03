@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: 文档站点
-  text: 基于 VitePress 构建
-  tagline: 简洁、快速、现代化的文档站点
+  name: 夏末物语
+  text: 记录与分享的地方
+  tagline: 在夏末的尾巴上，写下值得留下的故事
   actions:
     - theme: brand
       text: 开始阅读

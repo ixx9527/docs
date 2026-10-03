@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   base: '/',
-  title: '文档站点',
-  description: '基于 VitePress 构建的文档站点',
+  title: '夏末物语',
+  description: '夏末的个人文档站点',
   lang: 'zh-CN',
 
   themeConfig: {
