@@ -1,0 +1,290 @@
+/* 夏末物语 · 手账感主题
+   色盘：纸白 / 墨青 / 夕烧橙 */
+
+:root {
+  --vp-c-brand-1: #16665f;
+  --vp-c-brand-2: #1d7d74;
+  --vp-c-brand-3: #2a8f85;
+  --vp-c-brand-soft: rgba(42, 143, 133, 0.14);
+
+  /* 自有强调色：夕烧橙 */
+  --sm-accent: #ef7d4f;
+  --sm-accent-soft: rgba(239, 125, 79, 0.1);
+  --sm-tape: rgba(239, 125, 79, 0.3);
+
+  --vp-c-bg: #fdfbf7;
+  --vp-c-bg-alt: #f7f2e9;
+  --vp-c-bg-elv: #fffefb;
+  --vp-c-bg-soft: #f3eee4;
+
+  --vp-c-divider: #e6ddcd;
+  --vp-c-gutter: #efe8db;
+  --vp-c-border: #ded4c3;
+
+  --vp-c-text-1: #33322e;
+  --vp-c-text-2: #6d675c;
+  --vp-c-text-3: #9c9487;
+
+  --vp-nav-bg-color: rgba(253, 251, 247, 0.86);
+  --vp-sidebar-bg-color: #faf6ee;
+  --vp-code-block-bg: #f8f4ec;
+
+  --vp-font-family-base: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-heading: "KaiTi", "STKaiti", "楷体", "Kaiti SC", "DFKai-SB",
+    "PingFang SC", "Microsoft YaHei", serif;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #1f8f85 12%, #ef7d4f 88%);
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    rgba(239, 125, 79, 0.42) 40%,
+    rgba(42, 143, 133, 0.42) 60%
+  );
+  --vp-home-hero-image-filter: blur(46px);
+}
+
+.dark {
+  --vp-c-brand-1: #6fd0c2;
+  --vp-c-brand-2: #8adbcf;
+  --vp-c-brand-3: #46a89b;
+  --vp-c-brand-soft: rgba(111, 208, 194, 0.16);
+
+  --sm-accent: #f2946a;
+  --sm-accent-soft: rgba(242, 148, 106, 0.14);
+  --sm-tape: rgba(242, 148, 106, 0.26);
+
+  --vp-c-bg: #15171b;
+  --vp-c-bg-alt: #1a1d22;
+  --vp-c-bg-elv: #1f232a;
+  --vp-c-bg-soft: #20242a;
+
+  --vp-c-divider: #2b3037;
+  --vp-c-gutter: #12141a;
+  --vp-c-border: #343b44;
+
+  --vp-c-text-1: #e9e6df;
+  --vp-c-text-2: #a9b0b7;
+  --vp-c-text-3: #7d858e;
+
+  --vp-nav-bg-color: rgba(21, 23, 27, 0.86);
+  --vp-sidebar-bg-color: #181b20;
+  --vp-code-block-bg: #1b1f25;
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #6fd0c2 12%, #f2946a 88%);
+}
+
+/* ---------- 导航与页脚 ---------- */
+.VPNavBarTitle .title {
+  font-family: var(--vp-font-family-heading);
+  font-size: 17px;
+  letter-spacing: 1.5px;
+}
+.VPMenuLink .text,
+.VPNavBarMenuLink span {
+  letter-spacing: 0.3px;
+}
+.VPFooter {
+  border-top: 1px dashed var(--vp-c-divider);
+}
+.VPFooter .label,
+.VPFooter .message {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: 0.5px;
+}
+
+/* ---------- 首页 ---------- */
+.VPHero .name,
+.VPHero .text {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: 2px;
+}
+.VPHero .tagline {
+  font-family: var(--vp-font-family-heading);
+  font-size: 17px;
+  letter-spacing: 0.8px;
+}
+.VPFeature {
+  border: 1px dashed var(--vp-c-divider) !important;
+  border-radius: 14px;
+  background: var(--vp-c-bg-elv);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.VPFeature:hover {
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-1) !important;
+  box-shadow: 0 8px 24px rgba(42, 143, 133, 0.12);
+}
+.VPFeature .title {
+  font-family: var(--vp-font-family-heading);
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+.VPFeature .details {
+  line-height: 1.8;
+}
+
+/* ---------- 正文排版 ---------- */
+.vp-doc h1 {
+  font-family: var(--vp-font-family-heading);
+  font-size: 30px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding-bottom: 0.35em;
+  border-bottom: 2px dashed var(--vp-c-divider);
+}
+/* 导语：紧跟标题的第一段 */
+.vp-doc h1 + p {
+  font-size: 16.5px;
+  line-height: 1.95;
+  color: var(--vp-c-text-2);
+}
+.vp-doc h2 {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  position: relative;
+  margin-top: 52px;
+}
+/* 和纸胶带 */
+.vp-doc h2::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 2px;
+  width: 58px;
+  height: 16px;
+  background: var(--sm-tape);
+  border-radius: 2px;
+  transform: rotate(-2.5deg);
+}
+.vp-doc h3 {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: 0.6px;
+  line-height: 1.55;
+  padding-left: 10px;
+  border-left: 3px solid var(--vp-c-brand-soft);
+}
+.vp-doc h4 {
+  letter-spacing: 0.4px;
+}
+.vp-doc p {
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+.vp-doc li + li {
+  margin-top: 6px;
+}
+.vp-doc ul li,
+.vp-doc ol li {
+  line-height: 1.8;
+}
+.vp-doc strong {
+  color: var(--vp-c-text-1);
+}
+.vp-doc a {
+  text-underline-offset: 3px;
+}
+
+/* 分隔线 → 手账里的点线（hr 是空元素，::after 不渲染，故用背景） */
+.vp-doc hr {
+  height: 6px;
+  margin: 32px 0;
+  border: none;
+  background-image: radial-gradient(circle, var(--vp-c-brand-1) 1.3px, transparent 1.5px);
+  background-size: 16px 6px;
+  background-position: center;
+  background-repeat: repeat-x;
+  opacity: 0.5;
+}
+
+/* 引用块 → 便签纸 */
+.vp-doc blockquote {
+  margin: 20px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--sm-accent);
+  border-radius: 0 10px 10px 0;
+  background: var(--sm-accent-soft);
+  color: var(--vp-c-text-1);
+  font-weight: 400;
+}
+.vp-doc blockquote p {
+  color: inherit;
+  font-weight: inherit;
+  line-height: 1.8;
+}
+
+/* 表格：数独长文里密度最高 */
+.vp-doc table {
+  border: 1px dashed var(--vp-c-divider);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.vp-doc thead th {
+  background: var(--vp-c-brand-soft);
+  font-family: var(--vp-font-family-heading);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--vp-c-text-1);
+}
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-bottom: 1px dashed var(--vp-c-divider);
+  padding: 9px 14px;
+  line-height: 1.7;
+}
+.vp-doc tbody tr:nth-child(2n) {
+  background: rgba(42, 143, 133, 0.045);
+}
+.vp-doc tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* 行内代码 */
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-brand-soft);
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+
+/* ---------- 侧边栏与目录 ---------- */
+.VPSidebar .group-text,
+.VPDocAsideOutline .outline-title {
+  font-family: var(--vp-font-family-heading);
+  letter-spacing: 0.8px;
+}
+.VPDocAsideOutline .outline-link {
+  line-height: 1.7;
+}
+
+/* ---------- 收尾小物 ---------- */
+.summer-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin: 8px 0 4px;
+  color: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-heading);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.summer-strip figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.summer-strip svg {
+  width: 42px;
+  height: 42px;
+  color: var(--vp-c-brand-3);
+  opacity: 0.85;
+}
+.summer-strip figure:hover svg {
+  color: var(--sm-accent);
+  opacity: 1;
+}
