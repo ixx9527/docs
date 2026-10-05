@@ -23,6 +23,13 @@ export default defineConfig({
           { text: '文化遗产寻访', link: '/articles/heritage-fieldtrip-grand-canal' },
         ],
       },
+      {
+        text: '游戏',
+        items: [
+          { text: 'FF7 重制版流程攻略', link: '/articles/ff7-remake-walkthrough' },
+          { text: 'FF7 战斗机制与魔晶石', link: '/articles/ff7-remake-combat-materia-guide' },
+        ],
+      },
     ],
 
     sidebar: {
@@ -40,6 +47,14 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '文化遗产寻访：拱宸桥·桥西', link: '/articles/heritage-fieldtrip-grand-canal' },
+          ],
+        },
+        {
+          text: '游戏',
+          collapsed: false,
+          items: [
+            { text: '米德加的三十天：FF7 重制版流程攻略', link: '/articles/ff7-remake-walkthrough' },
+            { text: '力竭才是伤害公式：战斗机制与魔晶石 Build', link: '/articles/ff7-remake-combat-materia-guide' },
           ],
         },
       ],
