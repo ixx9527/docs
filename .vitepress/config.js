@@ -28,6 +28,7 @@ export default defineConfig({
         items: [
           { text: 'FF7 重制版流程攻略', link: '/articles/ff7-remake-walkthrough' },
           { text: 'FF7 战斗机制与魔晶石', link: '/articles/ff7-remake-combat-materia-guide' },
+          { text: '暗黑2 暴风雪法师', link: '/articles/d2-blizzard-sorceress-guide' },
         ],
       },
     ],
@@ -55,6 +56,7 @@ export default defineConfig({
           items: [
             { text: '米德加的三十天：FF7 重制版流程攻略', link: '/articles/ff7-remake-walkthrough' },
             { text: '力竭才是伤害公式：战斗机制与魔晶石 Build', link: '/articles/ff7-remake-combat-materia-guide' },
+            { text: '暗黑破坏神 II：暴风雪法师开荒速查', link: '/articles/d2-blizzard-sorceress-guide' },
           ],
         },
       ],
