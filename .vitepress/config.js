@@ -15,8 +15,13 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '数独高级技巧', link: '/articles/sudoku-advanced-techniques' },
-      { text: '数独技巧识别', link: '/articles/sudoku-pattern-recognition' },
+      {
+        text: '数独',
+        items: [
+          { text: '高级技巧的底层原理', link: '/articles/sudoku-advanced-techniques' },
+          { text: '解题技巧的快速识别', link: '/articles/sudoku-pattern-recognition' },
+        ],
+      },
       {
         text: '作业',
         items: [
