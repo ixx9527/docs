@@ -17,7 +17,7 @@ PwP 的问题很直接：**能不能让一个通用 CUA 只靠看截图和操作
 
 ## 二、环境设计
 
-PwP 让智能体通过**截图 + 原始键鼠事件（xdotool）**控制一个运行在 Docker 中的 VSCode IDE，形式化为部分可观测马尔可夫决策过程（POMDP）：
+PwP 让智能体通过 <strong>截图 + 原始键鼠事件（xdotool）</strong> 控制一个运行在 Docker 中的 VSCode IDE，形式化为部分可观测马尔可夫决策过程（POMDP）：
 
 - **动作**：原始键盘/鼠标操作（点击坐标、输入文字、快捷键）
 - **观测**：屏幕截图 + Set-of-Marks（SoM）标注的可交互元素
