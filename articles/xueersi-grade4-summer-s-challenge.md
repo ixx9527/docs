@@ -593,61 +593,63 @@ x = **2**
 
 请把下面的除法竖式补充完整，除数是 \_\_\_\_\_\_。
 
-<svg width="340" height="280" viewBox="0 0 340 280" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="17">
-  <!-- 列位置：c1=160, c2=190, c3=220, c4=250, c5=280 -->
+<svg width="320" height="260" viewBox="0 0 320 260" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="16">
+  <!-- 方框 22x22 正方形，间距 8px -->
+  <!-- 除数 3 个：中心 51, 81, 111 -->
+  <!-- 被除数 5 个：中心 148, 178, 208, 238, 268 -->
 
-  <!-- 商：□ □ 1（对齐 c3, c4, c5） -->
-  <rect x="209" y="8" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="239" y="8" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <text x="280" y="28" text-anchor="middle" fill="black">1</text>
+  <!-- 商：□ □ 1（对齐被除数第 3,4,5 列） -->
+  <rect x="197" y="6" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="227" y="6" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <text x="268" y="23" text-anchor="middle" fill="black">1</text>
 
-  <!-- 除号：顶部横线 + 左侧弧形钩 -->
-  <!-- 横线从钩顶 (148,40) 延伸到被除数最右 (295,40) -->
-  <line x1="148" y1="40" x2="295" y2="40" stroke="black" stroke-width="1.2"/>
-  <!-- 钩：从 (148,40) 向左下弯曲，再向右下，形成 ")" 形状 -->
-  <path d="M 148,40 Q 130,40 128,58 Q 126,72 140,78" fill="none" stroke="black" stroke-width="1.2"/>
+  <!-- 除号：顶部横线（覆盖 5 个被除数）+ 弧线（在除数与被除数间隙） -->
+  <line x1="130" y1="36" x2="280" y2="36" stroke="black" stroke-width="1.2"/>
+  <!-- 弧线：从横线左端向下，略向左弯 -->
+  <path d="M 130,36 Q 122,48 124,60" fill="none" stroke="black" stroke-width="1.2"/>
 
-  <!-- 除数：□ □（2 位，在钩左侧） -->
-  <rect x="89" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="119" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <!-- 除数：3 个方框 -->
+  <rect x="40" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="70" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="100" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
 
-  <!-- 被除数：□ □ □ □ □（对齐 c1-c5） -->
-  <rect x="149" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="179" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="209" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="239" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="269" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <!-- 被除数：5 个方框 -->
+  <rect x="137" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="167" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="197" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="227" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="257" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
 
-  <!-- 第一行：3 7 2（对齐 c1, c2, c3） -->
-  <text x="160" y="108" text-anchor="middle" fill="black">3</text>
-  <text x="190" y="108" text-anchor="middle" fill="black">7</text>
-  <text x="220" y="108" text-anchor="middle" fill="black">2</text>
-  <line x1="145" y1="118" x2="295" y2="118" stroke="black" stroke-width="1"/>
+  <!-- 第一行：3 7 2（对齐被除数第 1,2,3 列） -->
+  <text x="148" y="92" text-anchor="middle" fill="black">3</text>
+  <text x="178" y="92" text-anchor="middle" fill="black">7</text>
+  <text x="208" y="92" text-anchor="middle" fill="black">2</text>
+  <line x1="130" y1="100" x2="280" y2="100" stroke="black" stroke-width="1"/>
 
-  <!-- 第二行：□ □ □（对齐 c2, c3, c4） -->
-  <rect x="179" y="124" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="209" y="124" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="239" y="124" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <!-- 第二行：□ □ □（对齐被除数第 2,3,4 列） -->
+  <rect x="167" y="106" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="197" y="106" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="227" y="106" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
 
-  <!-- 第三行：4 9 6（对齐 c2, c3, c4） -->
-  <text x="190" y="178" text-anchor="middle" fill="black">4</text>
-  <text x="220" y="178" text-anchor="middle" fill="black">9</text>
-  <text x="250" y="178" text-anchor="middle" fill="black">6</text>
-  <line x1="145" y1="188" x2="295" y2="188" stroke="black" stroke-width="1"/>
+  <!-- 第三行：4 9 6（对齐被除数第 2,3,4 列） -->
+  <text x="178" y="148" text-anchor="middle" fill="black">4</text>
+  <text x="208" y="148" text-anchor="middle" fill="black">9</text>
+  <text x="238" y="148" text-anchor="middle" fill="black">6</text>
+  <line x1="130" y1="156" x2="280" y2="156" stroke="black" stroke-width="1"/>
 
-  <!-- 第四行：□ □ □（对齐 c3, c4, c5） -->
-  <rect x="209" y="194" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="239" y="194" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="269" y="194" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <!-- 第四行：□ □ □（对齐被除数第 3,4,5 列） -->
+  <rect x="197" y="162" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="227" y="162" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="257" y="162" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
 
-  <!-- 第五行：□ □ □（对齐 c3, c4, c5） -->
-  <rect x="209" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="239" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <rect x="269" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <line x1="145" y1="256" x2="295" y2="256" stroke="black" stroke-width="1"/>
+  <!-- 第五行：□ □ □（对齐被除数第 3,4,5 列） -->
+  <rect x="197" y="188" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="227" y="188" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <rect x="257" y="188" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
+  <line x1="130" y1="218" x2="280" y2="218" stroke="black" stroke-width="1"/>
 
-  <!-- 余数 0（对齐 c5） -->
-  <text x="280" y="276" text-anchor="middle" fill="black">0</text>
+  <!-- 余数 0（对齐被除数第 5 列） -->
+  <text x="268" y="240" text-anchor="middle" fill="black">0</text>
 </svg>
 
 ::: details 参考解答
