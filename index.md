@@ -57,6 +57,19 @@ hero:
 
   <div class="category-section">
     <h2 class="category-title">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a4 4 0 014 4c0 1.1-.9 2-2 2h-4a2 2 0 01-2-2 4 4 0 014-4zM8 8v2a4 4 0 004 4 4 4 0 004-4V8M6 12h12M9 16l-1 4M15 16l1 4M12 14v4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      技术
+    </h2>
+    <div class="category-cards">
+      <a href="/articles/cua-swe-visual-software-engineering" class="card">
+        <h3>CUA-SWE：当 AI 智能体遇上视觉软件工程</h3>
+        <p>论文解读：一个让 AI 同时写代码、看界面、做交互的基准测试，视觉反馈带来质的飞跃。</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <h2 class="category-title">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h4m-2-2v4M14 12h4m-2-2v4M3 8a5 5 0 015-5h8a5 5 0 015 5v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       游戏攻略
     </h2>

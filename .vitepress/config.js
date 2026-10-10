@@ -30,6 +30,12 @@ export default defineConfig({
         ],
       },
       {
+        text: '技术',
+        items: [
+          { text: 'CUA-SWE 论文解读', link: '/articles/cua-swe-visual-software-engineering' },
+        ],
+      },
+      {
         text: '游戏',
         items: [
           { text: 'FF7 重制版流程攻略', link: '/articles/ff7-remake-walkthrough' },
@@ -58,6 +64,13 @@ export default defineConfig({
           items: [
             { text: '文化遗产寻访：拱宸桥·桥西', link: '/articles/heritage-fieldtrip-grand-canal' },
             { text: '四年级数学入学测试卷（S 卷-1）精解', link: '/articles/grade4-math-entry-test' },
+          ],
+        },
+        {
+          text: '技术',
+          collapsed: false,
+          items: [
+            { text: 'CUA-SWE：当 AI 智能体遇上视觉软件工程', link: '/articles/cua-swe-visual-software-engineering' },
           ],
         },
         {
