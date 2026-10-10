@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/cua-swe-visual-software-engineering
+      link: /articles/programming-with-pixels-cua-software-engineering
 ---
 
 <div class="home-categories">
@@ -55,6 +55,10 @@ hero:
       技术
     </h2>
     <div class="category-cards">
+      <a href="/articles/programming-with-pixels-cua-software-engineering" class="card">
+        <h3>Programming with Pixels：让 AI 看着 IDE 写代码</h3>
+        <p>论文解读：纯视觉操作 IDE 只有 22.9%，加两个文本 API 就跳到 50.7%——瓶颈不在推理，在视觉。</p>
+      </a>
       <a href="/articles/cua-swe-visual-software-engineering" class="card">
         <h3>CUA-SWE：当 AI 智能体遇上视觉软件工程</h3>
         <p>论文解读：一个让 AI 同时写代码、看界面、做交互的基准测试，视觉反馈带来质的飞跃。</p>
