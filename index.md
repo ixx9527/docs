@@ -11,13 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/sudoku-advanced-techniques
-    - theme: alt
-      text: 看实践作业
-      link: /articles/heritage-fieldtrip-grand-canal
-    - theme: alt
-      text: GitHub
-      link: https://github.com/ixx9527/docs
+      link: /articles/cua-swe-visual-software-engineering
 ---
 
 <div class="home-categories">
