@@ -309,7 +309,7 @@
 正方形中有一个正三角形，"?"处的角度是 \_\_\_\_\_\_°。
 
 <svg width="200" height="170" viewBox="0 0 200 170" style="display:block;margin:12px 0" font-family="Georgia, 'Times New Roman', serif" font-size="12">
-  <!-- 正方形（缩小 75%，靠左） -->
+  <!-- 正方形 -->
   <rect x="65" y="40" width="120" height="120" fill="white" stroke="black" stroke-width="1"/>
   
   <!-- 正三角形边 ED、EC -->
@@ -320,11 +320,11 @@
   <line x1="65" y1="40" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
   <line x1="185" y1="40" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
   
-  <!-- ? 弧：半径 10% 边长，圆心 E，端点在 EA、ED 上 -->
-  <path d="M 113.4,53.0 A 12 12 0 0 1 119.0,66.5" fill="none" stroke="black" stroke-width="0.8"/>
+  <!-- ? 弧：圆心 E，从 EA 到 ED，向左鼓出（sweep=0） -->
+  <path d="M 113.4,53.0 A 12 12 0 0 0 119.0,66.5" fill="none" stroke="black" stroke-width="0.8"/>
   
-  <!-- "?" 在夹角内部、弧外侧，略向左下 -->
-  <text x="106" y="66" font-size="12" fill="black">?</text>
+  <!-- "?" 在圆弧左侧 -->
+  <text x="101" y="63" font-size="12" fill="black">?</text>
 </svg>
 
 ::: details 参考解答
