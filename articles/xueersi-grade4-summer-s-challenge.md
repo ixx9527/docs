@@ -308,22 +308,23 @@
 
 正方形中有一个正三角形，"?"处的角度是 \_\_\_\_\_\_°。
 
-<svg width="260" height="220" viewBox="0 0 260 220" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="14">
-  <!-- 正方形 ABCD：A(60,40) B(220,40) C(220,200) D(60,200) -->
-  <rect x="60" y="40" width="160" height="160" fill="white" stroke="black" stroke-width="1.2"/>
+<svg width="200" height="170" viewBox="0 0 200 170" style="display:block;margin:12px 0" font-family="Georgia, 'Times New Roman', serif" font-size="12">
+  <!-- 正方形（缩小 75%，靠左） -->
+  <rect x="65" y="40" width="120" height="120" fill="white" stroke="black" stroke-width="1"/>
   
-  <!-- 正三角形 DEC：底边 DC 与正方形下边重合，顶点 E 在中线上 -->
-  <!-- E = (140, 61.4)，距上边约 13.4% 边长 -->
-  <line x1="60" y1="200" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
-  <line x1="220" y1="200" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  <!-- 正三角形边 ED、EC -->
+  <line x1="65" y1="160" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
+  <line x1="185" y1="160" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
   
-  <!-- 从 A、B 连接 E（浅 V 形），保留完整上边 AB -->
-  <line x1="60" y1="40" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
-  <line x1="220" y1="40" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  <!-- V 形连线 EA、EB -->
+  <line x1="65" y1="40" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
+  <line x1="185" y1="40" x2="125.0" y2="56.1" stroke="black" stroke-width="1"/>
   
-  <!-- ? 弧：E 点左侧，EA 与 ED 之间 -->
-  <path d="M 125.5,57.6 A 15 15 0 0 1 132.5,74.4" fill="none" stroke="black" stroke-width="1"/>
-  <text x="114" y="66" font-size="14" fill="black">?</text>
+  <!-- ? 弧：半径 10% 边长，圆心 E，端点在 EA、ED 上 -->
+  <path d="M 113.4,53.0 A 12 12 0 0 1 119.0,66.5" fill="none" stroke="black" stroke-width="0.8"/>
+  
+  <!-- "?" 在夹角内部、弧外侧，略向左下 -->
+  <text x="106" y="66" font-size="12" fill="black">?</text>
 </svg>
 
 ::: details 参考解答
