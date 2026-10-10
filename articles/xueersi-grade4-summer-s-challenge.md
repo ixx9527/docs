@@ -375,30 +375,31 @@
 
 如图，在直角三角形 ABC 中，AB = 6cm，BC = 8cm，AC = 10cm，正方形 BDFE 的面积为 4 平方厘米，FG 垂直于 AC，则 FG 的长为 \_\_\_\_\_\_ 厘米。
 
-<svg width="240" height="200" viewBox="0 0 240 200" style="display:block;margin:12px auto">
-  <!-- 直角三角形 ABC：B 直角，AB=6(竖直), BC=8(水平), AC=10(斜边) -->
-  <!-- 比例：1cm = 20px，B(40,170), A(40,50), C(200,170) -->
-  <polygon points="40,170 40,50 200,170" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<svg width="280" height="200" viewBox="0 0 280 200" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="13">
+  <!-- 直角三角形 ABC：B(40,180) A(40,30) C(240,180) -->
+  <polygon points="40,180 40,30 240,180" fill="white" stroke="black" stroke-width="1.2"/>
+  
   <!-- 直角标记 B -->
-  <polyline points="40,164 46,164 46,170" fill="none" stroke="currentColor" stroke-width="1"/>
+  <polyline points="40,174 46,174 46,180" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- 正方形 BDFE -->
+  <rect x="40" y="130" width="50" height="50" fill="white" stroke="black" stroke-width="1.2"/>
+  
+  <!-- FG 连线 -->
+  <line x1="90" y1="130" x2="120" y2="90" stroke="black" stroke-width="1.2"/>
+  
+  <!-- G 点直角标记（完整方框，两边平行于 GC 和 GF） -->
+  <polyline points="128.0,96.0 122.0,104.0 114.0,98.0" fill="none" stroke="black" stroke-width="1"/>
+  
   <!-- 顶点标注 -->
-  <text x="28" y="45" font-size="13" fill="currentColor">A</text>
-  <text x="24" y="185" font-size="13" fill="currentColor">B</text>
-  <text x="205" y="185" font-size="13" fill="currentColor">C</text>
-  <!-- 正方形 BDFE：边长 2cm=40px，D 在 AB 上，E 在 BC 上，F 在内部 -->
-  <!-- D(40,130), E(80,170), F(80,130) -->
-  <rect x="40" y="130" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <text x="24" y="134" font-size="12" fill="currentColor">D</text>
-  <text x="82" y="185" font-size="12" fill="currentColor">E</text>
-  <text x="84" y="126" font-size="12" fill="currentColor">F</text>
-  <!-- FG 垂直于 AC：F(80,130)，G 在 AC 上 -->
-  <!-- AC 方程：从 A(40,50) 到 C(200,170)，方向 (160,120)，单位向量 (0.8,0.6) -->
-  <!-- F 到 AC 的垂足 G：G = F + t*(0.8,0.6)，其中 t 使 G 在 AC 上 -->
-  <!-- 计算得 G ≈ (112, 106) -->
-  <line x1="80" y1="130" x2="112" y2="106" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 直角标记 G -->
-  <polyline points="108,110 112,106 116,110" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="116" y="100" font-size="12" fill="currentColor">G</text>
+  <text x="26" y="26" font-size="13" fill="black">A</text>
+  <text x="26" y="196" font-size="13" fill="black">B</text>
+  <text x="246" y="196" font-size="13" fill="black">C</text>
+  <text x="26" y="134" font-size="13" fill="black">D</text>
+  <text x="86" y="196" font-size="13" fill="black">E</text>
+  <!-- F 标签移到右下方，避免压在 FG 上 -->
+  <text x="96" y="144" font-size="13" fill="black">F</text>
+  <text x="126" y="84" font-size="13" fill="black">G</text>
 </svg>
 
 ::: details 参考解答
