@@ -179,27 +179,26 @@
 
 如图（单位：厘米），平行四边形的面积是 84 平方厘米，高是 7 厘米。阴影部分的面积是 \_\_\_\_\_\_ 平方厘米。
 
-<svg width="260" height="130" viewBox="0 0 260 130" style="display:block;margin:12px auto">
-  <!-- 平行四边形 ABCD：底 12cm(120px)，高 7cm(70px)，倾斜 20px -->
-  <polygon points="50,100 170,100 190,30 70,30" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 顶点标注 -->
-  <text x="38" y="105" font-size="12" fill="currentColor">B</text>
-  <text x="172" y="105" font-size="12" fill="currentColor">C</text>
-  <text x="192" y="25" font-size="12" fill="currentColor">D</text>
-  <text x="58" y="25" font-size="12" fill="currentColor">A</text>
-  <!-- 阴影三角形：底 BE=8cm(80px)，高 7cm -->
-  <polygon points="50,100 130,100 70,30" fill="currentColor" opacity="0.2"/>
-  <!-- E 点标注 -->
-  <text x="132" y="115" font-size="12" fill="currentColor">E</text>
-  <!-- 高线 AE（虚线） -->
-  <line x1="70" y1="30" x2="70" y2="100" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- 直角标记 -->
-  <polyline points="70,94 76,94 76,100" fill="none" stroke="currentColor" stroke-width="1"/>
+<svg width="280" height="200" viewBox="0 0 280 200" style="display:block;margin:12px auto">
+  <!-- 平行四边形 ABCD：A 左下，B 右下，C 右上，D 左上 -->
+  <!-- AB = 12cm(120px)，高 7cm(70px)，斜边向右上倾斜 4cm(40px) -->
+  <polygon points="50,150 170,150 210,80 90,80" fill="white" stroke="black" stroke-width="1.2"/>
+  
+  <!-- 垂线 DE（从 D 到 AB 的竖直垂线） -->
+  <line x1="90" y1="80" x2="90" y2="150" stroke="black" stroke-width="1.2"/>
+  
+  <!-- 三角形 ADE 填充深灰色 -->
+  <polygon points="50,150 90,80 90,150" fill="#555555" opacity="0.7"/>
+  
+  <!-- E 点右上方的直角符号 -->
+  <polyline points="90,144 96,144 96,150" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- EB 段尺寸标记（花括号式） -->
+  <!-- 从 E(90) 到 B(170)，中点 130 -->
+  <path d="M 90,162 Q 90,168 96,168 L 124,168 Q 130,168 130,175 Q 130,168 136,168 L 164,168 Q 170,168 170,162" fill="none" stroke="black" stroke-width="1"/>
+  
   <!-- 8cm 标注 -->
-  <text x="90" y="118" text-anchor="middle" font-size="11" fill="currentColor">8cm</text>
-  <line x1="50" y1="106" x2="130" y2="106" stroke="currentColor" stroke-width="0.8"/>
-  <line x1="50" y1="103" x2="50" y2="109" stroke="currentColor" stroke-width="0.8"/>
-  <line x1="130" y1="103" x2="130" y2="109" stroke="currentColor" stroke-width="0.8"/>
+  <text x="130" y="190" text-anchor="middle" font-size="13" fill="black">8cm</text>
 </svg>
 
 ::: details 参考解答
