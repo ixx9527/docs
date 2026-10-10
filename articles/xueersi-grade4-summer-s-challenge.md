@@ -605,8 +605,8 @@ x = **2**
 
   <!-- 除号：顶部横线（覆盖 5 个被除数）+ 弧线（在除数与被除数间隙） -->
   <line x1="130" y1="36" x2="280" y2="36" stroke="black" stroke-width="1.2"/>
-  <!-- 弧线：从横线左端向下，略向左弯 -->
-  <path d="M 130,36 Q 122,48 124,60" fill="none" stroke="black" stroke-width="1.2"/>
+  <!-- 弧线：窄右括号形，上下端点 x 相同，中段向右凸 -->
+  <path d="M 130,36 Q 138,50 130,66" fill="none" stroke="black" stroke-width="1.2"/>
 
   <!-- 除数：3 个方框 -->
   <rect x="40" y="44" width="22" height="22" rx="1" fill="white" stroke="black" stroke-width="1"/>
