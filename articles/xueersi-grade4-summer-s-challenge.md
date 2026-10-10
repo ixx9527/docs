@@ -179,26 +179,25 @@
 
 如图（单位：厘米），平行四边形的面积是 84 平方厘米，高是 7 厘米。阴影部分的面积是 \_\_\_\_\_\_ 平方厘米。
 
-<svg width="280" height="200" viewBox="0 0 280 200" style="display:block;margin:12px auto">
-  <!-- 平行四边形 ABCD：A 左下，B 右下，C 右上，D 左上 -->
-  <!-- AB = 12cm(120px)，高 7cm(70px)，斜边向右上倾斜 4cm(40px) -->
-  <polygon points="50,150 170,150 210,80 90,80" fill="white" stroke="black" stroke-width="1.2"/>
+<svg width="310" height="210" viewBox="0 0 310 210" style="display:block;margin:12px auto">
+  <!-- 平行四边形：底 150px，高 70px，斜边偏移 50px -->
+  <!-- A(50,150) B(200,150) C(250,80) D(100,80) -->
+  <polygon points="50,150 200,150 250,80 100,80" fill="white" stroke="black" stroke-width="1.2"/>
   
-  <!-- 垂线 DE（从 D 到 AB 的竖直垂线） -->
-  <line x1="90" y1="80" x2="90" y2="150" stroke="black" stroke-width="1.2"/>
+  <!-- 垂线 DE -->
+  <line x1="100" y1="80" x2="100" y2="150" stroke="black" stroke-width="1.2"/>
   
   <!-- 三角形 ADE 填充深灰色 -->
-  <polygon points="50,150 90,80 90,150" fill="#555555" opacity="0.7"/>
+  <polygon points="50,150 100,80 100,150" fill="#555555" opacity="0.7"/>
   
-  <!-- E 点右上方的直角符号 -->
-  <polyline points="90,144 96,144 96,150" fill="none" stroke="black" stroke-width="1"/>
+  <!-- E 点右上方直角符号（边长 14px） -->
+  <polyline points="100,136 114,136 114,150" fill="none" stroke="black" stroke-width="1"/>
   
-  <!-- EB 段尺寸标记（花括号式） -->
-  <!-- 从 E(90) 到 B(170)，中点 130 -->
-  <path d="M 90,162 Q 90,168 96,168 L 124,168 Q 130,168 130,175 Q 130,168 136,168 L 164,168 Q 170,168 170,162" fill="none" stroke="black" stroke-width="1"/>
+  <!-- EB 段花括号尺寸标记（E=100, B=200, 中点 150） -->
+  <path d="M 100,162 Q 100,168 106,168 L 144,168 Q 150,168 150,176 Q 150,168 156,168 L 194,168 Q 200,168 200,162" fill="none" stroke="black" stroke-width="1"/>
   
   <!-- 8cm 标注 -->
-  <text x="130" y="190" text-anchor="middle" font-size="13" fill="black">8cm</text>
+  <text x="150" y="196" text-anchor="middle" font-size="13" fill="black">8cm</text>
 </svg>
 
 ::: details 参考解答
