@@ -595,58 +595,61 @@ x = **2**
 
 请把下面的除法竖式补充完整，除数是 \_\_\_\_\_\_。
 
-<svg width="300" height="230" viewBox="0 0 300 230" style="display:block;margin:12px auto" font-family="monospace" font-size="14">
-  <!-- 商：□ □ 1 -->
-  <rect x="130" y="10" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="155" y="10" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <text x="184" y="25" fill="currentColor">1</text>
+<svg width="310" height="280" viewBox="0 0 310 280" style="display:block;margin:12px auto" font-family="monospace" font-size="16">
+  <!-- 列位置定义（每列 25px） -->
+  <!-- 除数列：80, 105 | 被除数列：130, 155, 180, 205, 230 -->
 
-  <!-- 除号横线 -->
-  <line x1="125" y1="35" x2="215" y2="35" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 商：□ □ 1（对应被除数第 3,4,5 位） -->
+  <rect x="171" y="8" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="196" y="8" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="230" y="25" text-anchor="middle" fill="currentColor">1</text>
+
+  <!-- 除号横线（从除数右侧到被除数最右） -->
+  <line x1="115" y1="36" x2="248" y2="36" stroke="currentColor" stroke-width="1.5"/>
   <!-- 除号弧线 -->
-  <path d="M 130,35 Q 125,50 130,60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M 120,36 Q 114,52 120,64" fill="none" stroke="currentColor" stroke-width="1.5"/>
 
   <!-- 除数：□ □ -->
-  <rect x="95" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="118" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="71" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="96" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
 
   <!-- 被除数：□ □ □ □ □ -->
-  <rect x="130" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="155" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="180" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="205" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="230" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="121" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="146" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="171" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="196" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="221" y="42" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
 
-  <!-- 第一步：3 7 2 -->
-  <text x="155" y="82" fill="currentColor">3</text>
-  <text x="180" y="82" fill="currentColor">7</text>
-  <text x="205" y="82" fill="currentColor">2</text>
-  <line x1="125" y1="90" x2="250" y2="90" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 第一步：3 7 2（对齐被除数第 1,2,3 位） -->
+  <text x="130" y="88" text-anchor="middle" fill="currentColor">3</text>
+  <text x="155" y="88" text-anchor="middle" fill="currentColor">7</text>
+  <text x="180" y="88" text-anchor="middle" fill="currentColor">2</text>
+  <line x1="115" y1="96" x2="248" y2="96" stroke="currentColor" stroke-width="1"/>
 
-  <!-- 第二步：□ □ □ -->
-  <rect x="155" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="180" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="205" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 第二步余数+落位：□ □ □（对齐第 2,3,4 位） -->
+  <rect x="146" y="102" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="171" y="102" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="196" y="102" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
 
-  <!-- 4 9 6 -->
-  <text x="155" y="132" fill="currentColor">4</text>
-  <text x="180" y="132" fill="currentColor">9</text>
-  <text x="205" y="132" fill="currentColor">6</text>
-  <line x1="125" y1="140" x2="250" y2="140" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 4 9 6（对齐第 2,3,4 位） -->
+  <text x="155" y="138" text-anchor="middle" fill="currentColor">4</text>
+  <text x="180" y="138" text-anchor="middle" fill="currentColor">9</text>
+  <text x="205" y="138" text-anchor="middle" fill="currentColor">6</text>
+  <line x1="115" y1="146" x2="248" y2="146" stroke="currentColor" stroke-width="1"/>
 
-  <!-- 第三步：□ □ □ -->
-  <rect x="180" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="205" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="230" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 第三步余数+落位：□ □ □（对齐第 3,4,5 位） -->
+  <rect x="171" y="152" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="196" y="152" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="221" y="152" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
 
-  <!-- □ □ □ -->
-  <rect x="180" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="205" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <rect x="230" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
-  <line x1="155" y1="198" x2="250" y2="198" stroke="currentColor" stroke-width="1.2"/>
+  <!-- □ □ □（对齐第 3,4,5 位，即除数×1） -->
+  <rect x="171" y="178" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="196" y="178" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="221" y="178" width="18" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="145" y1="206" x2="248" y2="206" stroke="currentColor" stroke-width="1"/>
 
-  <!-- 余数 0 -->
-  <text x="230" y="218" fill="currentColor">0</text>
+  <!-- 余数 0（对齐第 5 位） -->
+  <text x="230" y="228" text-anchor="middle" fill="currentColor">0</text>
 </svg>
 
 ::: details 参考解答
