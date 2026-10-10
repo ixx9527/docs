@@ -179,20 +179,27 @@
 
 如图（单位：厘米），平行四边形的面积是 84 平方厘米，高是 7 厘米。阴影部分的面积是 \_\_\_\_\_\_ 平方厘米。
 
-<svg width="220" height="110" viewBox="0 0 220 110" style="display:block;margin:12px auto">
-  <!-- 平行四边形 -->
-  <polygon points="40,90 180,90 200,20 60,20" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 阴影三角形 -->
-  <polygon points="40,90 60,20 80,90" fill="currentColor" opacity="0.25"/>
-  <!-- 高线（虚线） -->
-  <line x1="60" y1="20" x2="60" y2="90" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+<svg width="260" height="130" viewBox="0 0 260 130" style="display:block;margin:12px auto">
+  <!-- 平行四边形 ABCD：底 12cm(120px)，高 7cm(70px)，倾斜 20px -->
+  <polygon points="50,100 170,100 190,30 70,30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 顶点标注 -->
+  <text x="38" y="105" font-size="12" fill="currentColor">B</text>
+  <text x="172" y="105" font-size="12" fill="currentColor">C</text>
+  <text x="192" y="25" font-size="12" fill="currentColor">D</text>
+  <text x="58" y="25" font-size="12" fill="currentColor">A</text>
+  <!-- 阴影三角形：底 BE=8cm(80px)，高 7cm -->
+  <polygon points="50,100 130,100 70,30" fill="currentColor" opacity="0.2"/>
+  <!-- E 点标注 -->
+  <text x="132" y="115" font-size="12" fill="currentColor">E</text>
+  <!-- 高线 AE（虚线） -->
+  <line x1="70" y1="30" x2="70" y2="100" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
   <!-- 直角标记 -->
-  <polyline points="60,84 66,84 66,90" fill="none" stroke="currentColor" stroke-width="1"/>
+  <polyline points="70,94 76,94 76,100" fill="none" stroke="currentColor" stroke-width="1"/>
   <!-- 8cm 标注 -->
-  <text x="60" y="107" text-anchor="middle" font-size="12" fill="currentColor">8cm</text>
-  <line x1="40" y1="94" x2="80" y2="94" stroke="currentColor" stroke-width="1"/>
-  <line x1="40" y1="91" x2="40" y2="97" stroke="currentColor" stroke-width="1"/>
-  <line x1="80" y1="91" x2="80" y2="97" stroke="currentColor" stroke-width="1"/>
+  <text x="90" y="118" text-anchor="middle" font-size="11" fill="currentColor">8cm</text>
+  <line x1="50" y1="106" x2="130" y2="106" stroke="currentColor" stroke-width="0.8"/>
+  <line x1="50" y1="103" x2="50" y2="109" stroke="currentColor" stroke-width="0.8"/>
+  <line x1="130" y1="103" x2="130" y2="109" stroke="currentColor" stroke-width="0.8"/>
 </svg>
 
 ::: details 参考解答
@@ -297,14 +304,24 @@
 
 正方形中有一个正三角形，"?"处的角度是 \_\_\_\_\_\_°。
 
-<svg width="180" height="180" viewBox="0 0 180 180" style="display:block;margin:12px auto">
-  <!-- 正方形 -->
-  <rect x="30" y="30" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 正三角形（底边在正方形底边上，顶点在正方形内部） -->
-  <polygon points="30,150 150,150 90,50" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- ? 角度标记（顶点处） -->
-  <path d="M 78,62 A 16,16 0 0,1 102,62" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="84" y="76" font-size="13" fill="currentColor">?</text>
+<svg width="200" height="200" viewBox="0 0 200 200" style="display:block;margin:12px auto">
+  <!-- 正方形 ABCD：A 左上，B 右上，C 右下，D 左下 -->
+  <rect x="40" y="40" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="28" y="35" font-size="12" fill="currentColor">A</text>
+  <text x="162" y="35" font-size="12" fill="currentColor">B</text>
+  <text x="162" y="175" font-size="12" fill="currentColor">C</text>
+  <text x="28" y="175" font-size="12" fill="currentColor">D</text>
+  <!-- 正三角形 DCE：底边 DC，顶点 E 在正方形内部 -->
+  <!-- D(40,160), C(160,160), E(100, 160-120*√3/2) ≈ (100, 56) -->
+  <polygon points="40,160 160,160 100,56" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="102" y="50" font-size="12" fill="currentColor">E</text>
+  <!-- 从 A 到 E 的连线 -->
+  <line x1="40" y1="40" x2="100" y2="56" stroke="currentColor" stroke-width="1.2"/>
+  <!-- 从 B 到 E 的连线 -->
+  <line x1="160" y1="40" x2="100" y2="56" stroke="currentColor" stroke-width="1.2"/>
+  <!-- ? 角度标记（E 处，AE 与 BE 之间） -->
+  <path d="M 88,62 A 14,14 0 0,1 112,62" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="94" y="76" font-size="13" fill="currentColor">?</text>
 </svg>
 
 ::: details 参考解答
@@ -355,25 +372,30 @@
 
 如图，在直角三角形 ABC 中，AB = 6cm，BC = 8cm，AC = 10cm，正方形 BDFE 的面积为 4 平方厘米，FG 垂直于 AC，则 FG 的长为 \_\_\_\_\_\_ 厘米。
 
-<svg width="220" height="200" viewBox="0 0 220 200" style="display:block;margin:12px auto">
-  <!-- 直角三角形 ABC（B 为直角） -->
-  <polygon points="40,170 40,30 190,170" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<svg width="240" height="200" viewBox="0 0 240 200" style="display:block;margin:12px auto">
+  <!-- 直角三角形 ABC：B 直角，AB=6(竖直), BC=8(水平), AC=10(斜边) -->
+  <!-- 比例：1cm = 20px，B(40,170), A(40,50), C(200,170) -->
+  <polygon points="40,170 40,50 200,170" fill="none" stroke="currentColor" stroke-width="1.5"/>
   <!-- 直角标记 B -->
   <polyline points="40,164 46,164 46,170" fill="none" stroke="currentColor" stroke-width="1"/>
-  <!-- 正方形 BDFE -->
-  <rect x="40" y="130" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- FG 垂直于 AC -->
-  <line x1="80" y1="130" x2="115" y2="95" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 直角标记 G -->
-  <polyline points="111,99 115,95 119,99" fill="none" stroke="currentColor" stroke-width="1"/>
   <!-- 顶点标注 -->
-  <text x="30" y="24" font-size="13" fill="currentColor">A</text>
+  <text x="28" y="45" font-size="13" fill="currentColor">A</text>
   <text x="24" y="185" font-size="13" fill="currentColor">B</text>
-  <text x="194" y="185" font-size="13" fill="currentColor">C</text>
-  <text x="24" y="134" font-size="13" fill="currentColor">D</text>
-  <text x="84" y="145" font-size="13" fill="currentColor">F</text>
-  <text x="84" y="185" font-size="13" fill="currentColor">E</text>
-  <text x="118" y="90" font-size="13" fill="currentColor">G</text>
+  <text x="205" y="185" font-size="13" fill="currentColor">C</text>
+  <!-- 正方形 BDFE：边长 2cm=40px，D 在 AB 上，E 在 BC 上，F 在内部 -->
+  <!-- D(40,130), E(80,170), F(80,130) -->
+  <rect x="40" y="130" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <text x="24" y="134" font-size="12" fill="currentColor">D</text>
+  <text x="82" y="185" font-size="12" fill="currentColor">E</text>
+  <text x="84" y="126" font-size="12" fill="currentColor">F</text>
+  <!-- FG 垂直于 AC：F(80,130)，G 在 AC 上 -->
+  <!-- AC 方程：从 A(40,50) 到 C(200,170)，方向 (160,120)，单位向量 (0.8,0.6) -->
+  <!-- F 到 AC 的垂足 G：G = F + t*(0.8,0.6)，其中 t 使 G 在 AC 上 -->
+  <!-- 计算得 G ≈ (112, 106) -->
+  <line x1="80" y1="130" x2="112" y2="106" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 直角标记 G -->
+  <polyline points="108,110 112,106 116,110" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="116" y="100" font-size="12" fill="currentColor">G</text>
 </svg>
 
 ::: details 参考解答
