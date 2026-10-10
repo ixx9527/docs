@@ -595,18 +595,19 @@ x = **2**
 
 <svg width="340" height="280" viewBox="0 0 340 280" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="17">
   <!-- 列位置：c1=160, c2=190, c3=220, c4=250, c5=280 -->
-  <!-- 方框 22x24，居中于列位置 -->
 
   <!-- 商：□ □ 1（对齐 c3, c4, c5） -->
   <rect x="209" y="8" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
   <rect x="239" y="8" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
   <text x="280" y="28" text-anchor="middle" fill="black">1</text>
 
-  <!-- 除号：顶部横线（覆盖 c1-c5）+ 左侧弧形钩 -->
-  <line x1="145" y1="40" x2="295" y2="40" stroke="black" stroke-width="1.2"/>
-  <path d="M 150,40 C 140,40 138,54 140,64 C 141,70 144,74 150,76" fill="none" stroke="black" stroke-width="1.2"/>
+  <!-- 除号：顶部横线 + 左侧弧形钩 -->
+  <!-- 横线从钩顶 (148,40) 延伸到被除数最右 (295,40) -->
+  <line x1="148" y1="40" x2="295" y2="40" stroke="black" stroke-width="1.2"/>
+  <!-- 钩：从 (148,40) 向左下弯曲，再向右下，形成 ")" 形状 -->
+  <path d="M 148,40 Q 130,40 128,58 Q 126,72 140,78" fill="none" stroke="black" stroke-width="1.2"/>
 
-  <!-- 除数：□ □（2 位，在除号左侧） -->
+  <!-- 除数：□ □（2 位，在钩左侧） -->
   <rect x="89" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
   <rect x="119" y="52" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
 
@@ -621,7 +622,6 @@ x = **2**
   <text x="160" y="108" text-anchor="middle" fill="black">3</text>
   <text x="190" y="108" text-anchor="middle" fill="black">7</text>
   <text x="220" y="108" text-anchor="middle" fill="black">2</text>
-  <!-- 第一条横线 -->
   <line x1="145" y1="118" x2="295" y2="118" stroke="black" stroke-width="1"/>
 
   <!-- 第二行：□ □ □（对齐 c2, c3, c4） -->
@@ -633,7 +633,6 @@ x = **2**
   <text x="190" y="178" text-anchor="middle" fill="black">4</text>
   <text x="220" y="178" text-anchor="middle" fill="black">9</text>
   <text x="250" y="178" text-anchor="middle" fill="black">6</text>
-  <!-- 第二条横线 -->
   <line x1="145" y1="188" x2="295" y2="188" stroke="black" stroke-width="1"/>
 
   <!-- 第四行：□ □ □（对齐 c3, c4, c5） -->
@@ -645,7 +644,6 @@ x = **2**
   <rect x="209" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
   <rect x="239" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
   <rect x="269" y="224" width="22" height="24" rx="1" fill="white" stroke="black" stroke-width="1"/>
-  <!-- 第三条横线 -->
   <line x1="145" y1="256" x2="295" y2="256" stroke="black" stroke-width="1"/>
 
   <!-- 余数 0（对齐 c5） -->
