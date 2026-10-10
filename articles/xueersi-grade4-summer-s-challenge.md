@@ -179,15 +179,21 @@
 
 如图（单位：厘米），平行四边形的面积是 84 平方厘米，高是 7 厘米。阴影部分的面积是 \_\_\_\_\_\_ 平方厘米。
 
-```text
-    ┌─────────────────────┐
-    │                    │
-    │ ╲                   │
-    │  ╲                  │
-    │   ╲                 │
-    ────┴────────────────┘
-         8cm
-```
+<svg width="220" height="110" viewBox="0 0 220 110" style="display:block;margin:12px auto">
+  <!-- 平行四边形 -->
+  <polygon points="40,90 180,90 200,20 60,20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 阴影三角形 -->
+  <polygon points="40,90 60,20 80,90" fill="currentColor" opacity="0.25"/>
+  <!-- 高线（虚线） -->
+  <line x1="60" y1="20" x2="60" y2="90" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- 直角标记 -->
+  <polyline points="60,84 66,84 66,90" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 8cm 标注 -->
+  <text x="60" y="107" text-anchor="middle" font-size="12" fill="currentColor">8cm</text>
+  <line x1="40" y1="94" x2="80" y2="94" stroke="currentColor" stroke-width="1"/>
+  <line x1="40" y1="91" x2="40" y2="97" stroke="currentColor" stroke-width="1"/>
+  <line x1="80" y1="91" x2="80" y2="97" stroke="currentColor" stroke-width="1"/>
+</svg>
 
 ::: details 参考解答
 
@@ -222,16 +228,25 @@
 
 图中 ∠1 是 \_\_\_\_\_\_°。
 
-```text
-        ┌─┐
-        │ │
-        │ │
-   ┌──── └────┐
-   │     2     │
-   │           │
-   └───────────┘
-        125°
-```
+<svg width="260" height="160" viewBox="0 0 260 160" style="display:block;margin:12px auto">
+  <!-- 三角形 -->
+  <polygon points="60,130 220,130 100,30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 延长线（左下） -->
+  <line x1="60" y1="130" x2="20" y2="150" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 延长线（右下） -->
+  <line x1="220" y1="130" x2="250" y2="130" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 直角标记（顶部） -->
+  <polyline points="94,36 100,30 106,36" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 125° 弧 -->
+  <path d="M 45,138 A 20,20 0 0,1 52,118" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="28" y="155" font-size="12" fill="currentColor">125°</text>
+  <!-- ∠2 弧 -->
+  <path d="M 78,124 A 18,18 0 0,1 72,112" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="82" y="118" font-size="12" fill="currentColor">2</text>
+  <!-- 1 弧 -->
+  <path d="M 205,130 A 18,18 0 0,1 215,115" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="218" y="118" font-size="12" fill="currentColor">1</text>
+</svg>
 
 ::: details 参考解答
 
@@ -282,18 +297,15 @@
 
 正方形中有一个正三角形，"?"处的角度是 \_\_\_\_\_\_°。
 
-```text
-    ┌─────────┐
-    │╲       ╱│
-    │ ╲  ?  ╱ │
-    │  ╲   ╱  │
-    │   ╲ ╱   │
-    │    ╳    │
-    │   ╱ ╲   │
-    │  ╱   ╲  │
-    │      ╲ │
-    └─────────┘
-```
+<svg width="180" height="180" viewBox="0 0 180 180" style="display:block;margin:12px auto">
+  <!-- 正方形 -->
+  <rect x="30" y="30" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 正三角形（底边在正方形底边上，顶点在正方形内部） -->
+  <polygon points="30,150 150,150 90,50" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- ? 角度标记（顶点处） -->
+  <path d="M 78,62 A 16,16 0 0,1 102,62" fill="none" stroke="currentColor" stroke-width="1"/>
+  <text x="84" y="76" font-size="13" fill="currentColor">?</text>
+</svg>
 
 ::: details 参考解答
 
@@ -343,17 +355,26 @@
 
 如图，在直角三角形 ABC 中，AB = 6cm，BC = 8cm，AC = 10cm，正方形 BDFE 的面积为 4 平方厘米，FG 垂直于 AC，则 FG 的长为 \_\_\_\_\_\_ 厘米。
 
-```text
-    A
-    │╲
-    │ ╲
-    │  ╲ G
-    │   ╲
-    D────F
-    │    │
-    │    │
-    B────E────C
-```
+<svg width="220" height="200" viewBox="0 0 220 200" style="display:block;margin:12px auto">
+  <!-- 直角三角形 ABC（B 为直角） -->
+  <polygon points="40,170 40,30 190,170" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 直角标记 B -->
+  <polyline points="40,164 46,164 46,170" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 正方形 BDFE -->
+  <rect x="40" y="130" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- FG 垂直于 AC -->
+  <line x1="80" y1="130" x2="115" y2="95" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 直角标记 G -->
+  <polyline points="111,99 115,95 119,99" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 顶点标注 -->
+  <text x="30" y="24" font-size="13" fill="currentColor">A</text>
+  <text x="24" y="185" font-size="13" fill="currentColor">B</text>
+  <text x="194" y="185" font-size="13" fill="currentColor">C</text>
+  <text x="24" y="134" font-size="13" fill="currentColor">D</text>
+  <text x="84" y="145" font-size="13" fill="currentColor">F</text>
+  <text x="84" y="185" font-size="13" fill="currentColor">E</text>
+  <text x="118" y="90" font-size="13" fill="currentColor">G</text>
+</svg>
 
 ::: details 参考解答
 
@@ -552,20 +573,59 @@ x = **2**
 
 请把下面的除法竖式补充完整，除数是 \_\_\_\_\_\_。
 
-```text
-        □ □ 1
-    ┌─────────────
-□ □│□ □ □ □ □
-    │  3  7  2
-    ├─────────────
-    │  □  □  □
-    │  4  9  6
-    ├─────────────
-    │     □  □  □
-    │     □  □  □
-    ├─────────────
-    │           0
-```
+<svg width="300" height="230" viewBox="0 0 300 230" style="display:block;margin:12px auto" font-family="monospace" font-size="14">
+  <!-- 商：□ □ 1 -->
+  <rect x="130" y="10" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="155" y="10" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <text x="184" y="25" fill="currentColor">1</text>
+
+  <!-- 除号横线 -->
+  <line x1="125" y1="35" x2="215" y2="35" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 除号弧线 -->
+  <path d="M 130,35 Q 125,50 130,60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+
+  <!-- 除数：□ □ -->
+  <rect x="95" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="118" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 被除数：□ □ □ □ □ -->
+  <rect x="130" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="155" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="180" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="205" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="230" y="42" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 第一步：3 7 2 -->
+  <text x="155" y="82" fill="currentColor">3</text>
+  <text x="180" y="82" fill="currentColor">7</text>
+  <text x="205" y="82" fill="currentColor">2</text>
+  <line x1="125" y1="90" x2="250" y2="90" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 第二步：□ □ □ -->
+  <rect x="155" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="180" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="205" y="96" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 4 9 6 -->
+  <text x="155" y="132" fill="currentColor">4</text>
+  <text x="180" y="132" fill="currentColor">9</text>
+  <text x="205" y="132" fill="currentColor">6</text>
+  <line x1="125" y1="140" x2="250" y2="140" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 第三步：□ □ □ -->
+  <rect x="180" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="205" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="230" y="146" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- □ □ □ -->
+  <rect x="180" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="205" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <rect x="230" y="172" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.2"/>
+  <line x1="155" y1="198" x2="250" y2="198" stroke="currentColor" stroke-width="1.2"/>
+
+  <!-- 余数 0 -->
+  <text x="230" y="218" fill="currentColor">0</text>
+</svg>
 
 ::: details 参考解答
 
