@@ -308,24 +308,22 @@
 
 正方形中有一个正三角形，"?"处的角度是 \_\_\_\_\_\_°。
 
-<svg width="200" height="200" viewBox="0 0 200 200" style="display:block;margin:12px auto">
-  <!-- 正方形 ABCD：A 左上，B 右上，C 右下，D 左下 -->
-  <rect x="40" y="40" width="120" height="120" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <text x="28" y="35" font-size="12" fill="currentColor">A</text>
-  <text x="162" y="35" font-size="12" fill="currentColor">B</text>
-  <text x="162" y="175" font-size="12" fill="currentColor">C</text>
-  <text x="28" y="175" font-size="12" fill="currentColor">D</text>
-  <!-- 正三角形 DCE：底边 DC，顶点 E 在正方形内部 -->
-  <!-- D(40,160), C(160,160), E(100, 160-120*√3/2) ≈ (100, 56) -->
-  <polygon points="40,160 160,160 100,56" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <text x="102" y="50" font-size="12" fill="currentColor">E</text>
-  <!-- 从 A 到 E 的连线 -->
-  <line x1="40" y1="40" x2="100" y2="56" stroke="currentColor" stroke-width="1.2"/>
-  <!-- 从 B 到 E 的连线 -->
-  <line x1="160" y1="40" x2="100" y2="56" stroke="currentColor" stroke-width="1.2"/>
-  <!-- ? 角度标记（E 处，AE 与 BE 之间） -->
-  <path d="M 88,62 A 14,14 0 0,1 112,62" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="94" y="76" font-size="13" fill="currentColor">?</text>
+<svg width="260" height="220" viewBox="0 0 260 220" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="14">
+  <!-- 正方形 ABCD：A(60,40) B(220,40) C(220,200) D(60,200) -->
+  <rect x="60" y="40" width="160" height="160" fill="white" stroke="black" stroke-width="1.2"/>
+  
+  <!-- 正三角形 DEC：底边 DC 与正方形下边重合，顶点 E 在中线上 -->
+  <!-- E = (140, 61.4)，距上边约 13.4% 边长 -->
+  <line x1="60" y1="200" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  <line x1="220" y1="200" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  
+  <!-- 从 A、B 连接 E（浅 V 形），保留完整上边 AB -->
+  <line x1="60" y1="40" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  <line x1="220" y1="40" x2="140.0" y2="61.4" stroke="black" stroke-width="1.2"/>
+  
+  <!-- ? 弧：E 点左侧，EA 与 ED 之间 -->
+  <path d="M 125.5,57.6 A 15 15 0 0 1 132.5,74.4" fill="none" stroke="black" stroke-width="1"/>
+  <text x="114" y="66" font-size="14" fill="black">?</text>
 </svg>
 
 ::: details 参考解答
