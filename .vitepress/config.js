@@ -27,6 +27,7 @@ export default defineConfig({
         items: [
           { text: '文化遗产寻访', link: '/articles/heritage-fieldtrip-grand-canal' },
           { text: '四年级数学入学测试卷精解', link: '/articles/grade4-math-entry-test' },
+          { text: '2026 四暑 S 思维闯关', link: '/articles/grade4-summer-s-challenge' },
         ],
       },
       {
@@ -65,6 +66,7 @@ export default defineConfig({
           items: [
             { text: '文化遗产寻访：拱宸桥·桥西', link: '/articles/heritage-fieldtrip-grand-canal' },
             { text: '四年级数学入学测试卷（S 卷-1）精解', link: '/articles/grade4-math-entry-test' },
+            { text: '2026 四暑 S 思维闯关', link: '/articles/grade4-summer-s-challenge' },
           ],
         },
         {

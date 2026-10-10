@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/programming-with-pixels-cua-software-engineering
+      link: /articles/grade4-summer-s-challenge
 ---
 
 <div class="home-categories">
@@ -45,6 +45,10 @@ hero:
       <a href="/articles/grade4-math-entry-test" class="card">
         <h3>三问四年级数学入学测试卷（S 卷）</h3>
         <p>卷面题目重排 + 10 题分步参考解答，每题解答可点击展开或收起。</p>
+      </a>
+      <a href="/articles/grade4-summer-s-challenge" class="card">
+        <h3>2026 四暑 S 思维闯关</h3>
+        <p>4 页 16 题，涵盖计算、方程、几何、计数、数论和行程，每题配参考解答。</p>
       </a>
     </div>
   </div>
