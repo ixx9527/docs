@@ -233,24 +233,30 @@
 
 图中 ∠1 是 \_\_\_\_\_\_°。
 
-<svg width="260" height="160" viewBox="0 0 260 160" style="display:block;margin:12px auto">
-  <!-- 三角形 -->
-  <polygon points="60,130 220,130 100,30" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 延长线（左下） -->
-  <line x1="60" y1="130" x2="20" y2="150" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 延长线（右下） -->
-  <line x1="220" y1="130" x2="250" y2="130" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 直角标记（顶部） -->
-  <polyline points="94,36 100,30 106,36" fill="none" stroke="currentColor" stroke-width="1"/>
-  <!-- 125° 弧 -->
-  <path d="M 45,138 A 20,20 0 0,1 52,118" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="28" y="155" font-size="12" fill="currentColor">125°</text>
-  <!-- ∠2 弧 -->
-  <path d="M 78,124 A 18,18 0 0,1 72,112" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="82" y="118" font-size="12" fill="currentColor">2</text>
-  <!-- 1 弧 -->
-  <path d="M 205,130 A 18,18 0 0,1 215,115" fill="none" stroke="currentColor" stroke-width="1"/>
-  <text x="218" y="118" font-size="12" fill="currentColor">1</text>
+<svg width="320" height="220" viewBox="0 0 320 220" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="14">
+  <!-- 三角形 ABC：A(80,150) B(133,75) C(240,150)，角 A=55° B=90° C=35° -->
+  <polygon points="80,150 240,150 133,75" fill="white" stroke="black" stroke-width="1.2"/>
+  
+  <!-- AB 延长线（越过 A 向左下） -->
+  <line x1="80" y1="150" x2="57" y2="183" stroke="black" stroke-width="1.2"/>
+  
+  <!-- AC 延长线（越过 C 向右） -->
+  <line x1="240" y1="150" x2="280" y2="150" stroke="black" stroke-width="1.2"/>
+  
+  <!-- B 点直角标记（随斜边旋转的小方框） -->
+  <polyline points="126.1,84.8 135.9,91.7 142.8,81.9" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- 角 2 弧（A 点右上方，AB 与 AC 之间，55°） -->
+  <path d="M 98,150 A 18 18 0 0 0 90,135" fill="none" stroke="black" stroke-width="1"/>
+  <text x="96" y="136" font-size="13" fill="black">2</text>
+  
+  <!-- 125° 弧（A 点右下方，水平射线与 AB 左下延长线之间） -->
+  <path d="M 102,150 A 22 22 0 0 1 67,168" fill="none" stroke="black" stroke-width="1"/>
+  <text x="72" y="186" font-size="12" fill="black">125°</text>
+  
+  <!-- 角 1 弧（C 点上方，CB 与水平延长线之间，145°） -->
+  <path d="M 260,150 A 20 20 0 0 0 224,139" fill="none" stroke="black" stroke-width="1"/>
+  <text x="238" y="128" font-size="13" fill="black">1</text>
 </svg>
 
 ::: details 参考解答
