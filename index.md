@@ -42,7 +42,7 @@ hero:
         <h3>文化遗产寻访：拱宸桥·桥西</h3>
         <p>四年级国庆跨学科实践，从选目的地到写手账、做讲解的完整记录。</p>
       </a>
-      <a href="/articles/grade4-math-entry-test" class="card">
+      <a href="/articles/sanwen-grade4-math-entry-test" class="card">
         <h3>三问四年级数学入学测试卷（S 卷）</h3>
         <p>卷面题目重排 + 10 题分步参考解答，每题解答可点击展开或收起。</p>
       </a>
