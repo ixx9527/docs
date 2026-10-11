@@ -26,6 +26,7 @@ export default defineConfig({
         text: '作业',
         items: [
           { text: '文化遗产寻访', link: '/articles/heritage-fieldtrip-grand-canal' },
+          { text: '作文：我的超市达人', link: '/articles/essay-supermarket-grandma' },
           { text: '三问四年级数学入学测试卷精解', link: '/articles/sanwen-grade4-math-entry-test' },
           { text: '学而思 2026 四暑 S 思维闯关', link: '/articles/xueersi-grade4-summer-s-challenge' },
         ],
@@ -65,6 +66,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '文化遗产寻访：拱宸桥·桥西', link: '/articles/heritage-fieldtrip-grand-canal' },
+            { text: '作文：我的超市达人——奶奶', link: '/articles/essay-supermarket-grandma' },
             { text: '三问四年级数学入学测试卷（S 卷-1）精解', link: '/articles/sanwen-grade4-math-entry-test' },
             { text: '学而思 2026 四暑 S 思维闯关', link: '/articles/xueersi-grade4-summer-s-challenge' },
           ],
