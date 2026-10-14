@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/xueersi-grade4-summer-s-challenge
+      link: /articles/sanwen-grade4-computation-drills
 ---
 
 <div class="home-categories">
@@ -41,6 +41,10 @@ hero:
       <a href="/articles/heritage-fieldtrip-grand-canal" class="card">
         <h3>文化遗产寻访：拱宸桥·桥西</h3>
         <p>四年级国庆跨学科实践，从选目的地到写手账、做讲解的完整记录。</p>
+      </a>
+      <a href="/articles/sanwen-grade4-computation-drills" class="card">
+        <h3>三问四年级 · 计算与方程专项 30 题</h3>
+        <p>照着入学测试卷丢的那 30 分反着编：位值与小数、巧算两式、解方程、大数乘法、模型与验算，每题解答都带验算。</p>
       </a>
       <a href="/articles/sanwen-grade4-math-entry-test" class="card">
         <h3>三问四年级数学入学测试卷（S 卷）</h3>
