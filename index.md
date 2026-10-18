@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/essay-longjing-shrimp
+      link: /articles/heritage-grand-canal-video-script
 ---
 
 <div class="home-categories">
@@ -41,6 +41,10 @@ hero:
       <a href="/articles/heritage-fieldtrip-grand-canal" class="card">
         <h3>文化遗产寻访：拱宸桥·桥西</h3>
         <p>四年级国庆跨学科实践，从选目的地到写手账、做讲解的完整记录。</p>
+      </a>
+      <a href="/articles/heritage-grand-canal-video-script" class="card">
+        <h3>小小讲解员：京杭大运河宣讲视频文案</h3>
+        <p>1–2 分钟讲解的口播稿：主稿 480 字、四段可插拔加长料、7 个分镜与字幕，外加数字口径和读音避坑清单。</p>
       </a>
       <a href="/articles/essay-supermarket-grandma" class="card">
         <h3>作文：我的超市达人——奶奶</h3>
