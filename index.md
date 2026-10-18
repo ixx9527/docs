@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/sanwen-grade4-computation-drills
+      link: /articles/essay-longjing-shrimp
 ---
 
 <div class="home-categories">
@@ -41,6 +41,14 @@ hero:
       <a href="/articles/heritage-fieldtrip-grand-canal" class="card">
         <h3>文化遗产寻访：拱宸桥·桥西</h3>
         <p>四年级国庆跨学科实践，从选目的地到写手账、做讲解的完整记录。</p>
+      </a>
+      <a href="/articles/essay-supermarket-grandma" class="card">
+        <h3>作文：我的超市达人——奶奶</h3>
+        <p>四年级写人习作，铅笔原稿与老师红笔批注并排呈现，再加融合版、润色版，反推批改到底在要求什么。</p>
+      </a>
+      <a href="/articles/essay-longjing-shrimp" class="card">
+        <h3>周记：第一次做龙井虾仁</h3>
+        <p>要求写出制作过程 200 字。原稿、补足 200 字的修改版、逐条修改建议和誊清前的四查——老师还没批，先把功课做在前面。</p>
       </a>
       <a href="/articles/sanwen-grade4-computation-drills" class="card">
         <h3>三问四年级 · 计算与方程专项 30 题</h3>
