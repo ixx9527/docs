@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /articles/heritage-grand-canal-video-script
+      link: /articles/hl-30-day-walkthrough
 ---
 
 <div class="home-categories">
@@ -115,6 +115,10 @@ hero:
       <a href="/articles/d2-frenzy-barbarian-guide" class="card">
         <h3>暗黑2 狂乱野蛮人</h3>
         <p>双手挥击开荒，24 级解锁狂乱，双武器近战推进地狱。</p>
+      </a>
+      <a href="/articles/hl-30-day-walkthrough" class="card">
+        <h3>霍格沃茨之遗：三十天均衡开荒</h3>
+        <p>把全部主线的等级门槛画成一条阶梯：终章只卡 24 级，真正的墙是通关后的学院杯。30 天逐日流程、天赋 36 点顺序与咒语解锁链。</p>
       </a>
     </div>
   </div>
