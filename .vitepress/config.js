@@ -31,7 +31,7 @@ export default defineConfig({
         items: [
           { text: '作文：我的超市达人', link: '/articles/essay-supermarket-grandma' },
           { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
-          { text: '观察日记：绿豆生长', link: '/articles/diary-mung-bean-observation' },
+          { text: '日记：绿豆成长记录', link: '/articles/diary-mung-bean-observation' },
         ],
       },
       {
@@ -87,7 +87,7 @@ export default defineConfig({
           items: [
             { text: '作文：我的超市达人——奶奶', link: '/articles/essay-supermarket-grandma' },
             { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
-            { text: '观察日记：绿豆生长', link: '/articles/diary-mung-bean-observation' },
+            { text: '日记：绿豆成长记录', link: '/articles/diary-mung-bean-observation' },
           ],
         },
         {
