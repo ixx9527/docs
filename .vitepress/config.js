@@ -23,12 +23,17 @@ export default defineConfig({
         ],
       },
       {
-        text: '作业',
+        text: '语文',
         items: [
           { text: '文化遗产寻访', link: '/articles/heritage-fieldtrip-grand-canal' },
           { text: '大运河宣讲视频文案', link: '/articles/heritage-grand-canal-video-script' },
           { text: '作文：我的超市达人', link: '/articles/essay-supermarket-grandma' },
           { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
+        ],
+      },
+      {
+        text: '数学',
+        items: [
           { text: '错题本 · 四上数学（第一册）', link: '/articles/mistakes-grade4-math-first' },
           { text: '三问四年级 · 计算与方程专项 30 题', link: '/articles/sanwen-grade4-computation-drills' },
           { text: '三问四年级数学入学测试卷精解', link: '/articles/sanwen-grade4-math-entry-test' },
@@ -67,13 +72,19 @@ export default defineConfig({
           ],
         },
         {
-          text: '作业',
+          text: '语文',
           collapsed: false,
           items: [
             { text: '文化遗产寻访：拱宸桥·桥西', link: '/articles/heritage-fieldtrip-grand-canal' },
             { text: '小小讲解员：京杭大运河宣讲视频文案', link: '/articles/heritage-grand-canal-video-script' },
             { text: '作文：我的超市达人——奶奶', link: '/articles/essay-supermarket-grandma' },
             { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
+          ],
+        },
+        {
+          text: '数学',
+          collapsed: false,
+          items: [
             { text: '错题本 · 四上数学（第一册）', link: '/articles/mistakes-grade4-math-first' },
             { text: '三问四年级 · 计算与方程专项 30 题', link: '/articles/sanwen-grade4-computation-drills' },
             { text: '三问四年级数学入学测试卷（S 卷-1）精解', link: '/articles/sanwen-grade4-math-entry-test' },
