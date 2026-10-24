@@ -6,6 +6,10 @@ export default defineConfig({
   description: '在夏末的尾巴上，写下值得留下的故事',
   lang: 'zh-CN',
 
+  // homeworks/ 已 gitignore，但 VitePress 默认会把根目录所有 .md 编进 dist 并喂给本地搜索。
+  // CI 检出时没有该目录，线上不受影响；挡的是本地 build → preview / serve 直连局域网这条路径。
+  srcExclude: ['homeworks/**'],
+
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/brand/logo.svg' }],
   ],
@@ -27,6 +31,7 @@ export default defineConfig({
         items: [
           { text: '作文：我的超市达人', link: '/articles/essay-supermarket-grandma' },
           { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
+          { text: '观察日记：绿豆生长', link: '/articles/diary-mung-bean-observation' },
         ],
       },
       {
@@ -82,6 +87,7 @@ export default defineConfig({
           items: [
             { text: '作文：我的超市达人——奶奶', link: '/articles/essay-supermarket-grandma' },
             { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
+            { text: '观察日记：绿豆生长', link: '/articles/diary-mung-bean-observation' },
           ],
         },
         {
