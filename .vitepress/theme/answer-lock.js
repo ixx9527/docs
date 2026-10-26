@@ -15,6 +15,7 @@ export const ANSWER_LOCK = {
   pages: [
     '/articles/sanwen-grade4-math-entry-test',
     '/articles/xueersi-grade4-summer-s-challenge',
+    '/articles/sanwen-grade4-computation-drills',
   ],
   sha256: '2cec8cf0e321c284fa0c2ebef804aac18bf1cbb85546f89e7e3d0b6aa8b9d2cf',
   weak: 'fcc66001ae4d2aa5',
