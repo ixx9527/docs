@@ -8,7 +8,8 @@ export default defineConfig({
 
   // homeworks/ 已 gitignore，但 VitePress 默认会把根目录所有 .md 编进 dist 并喂给本地搜索。
   // CI 检出时没有该目录，线上不受影响；挡的是本地 build → preview / serve 直连局域网这条路径。
-  srcExclude: ['homeworks/**'],
+  // QWEN.md 已入库，是给 agent 看的上下文，不是站点内容，必须挡住，否则线上多出 /QWEN.html。
+  srcExclude: ['homeworks/**', 'QWEN.md'],
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/brand/logo.svg' }],
@@ -55,6 +56,7 @@ export default defineConfig({
         items: [
           { text: 'Programming with Pixels 论文解读', link: '/articles/programming-with-pixels-cua-software-engineering' },
           { text: 'CUA-SWE 论文解读', link: '/articles/cua-swe-visual-software-engineering' },
+          { text: 'Meta Muse 录入管线', link: '/articles/muse-homework-pipeline' },
         ],
       },
       {
@@ -114,6 +116,7 @@ export default defineConfig({
           items: [
             { text: 'Programming with Pixels：让 AI 看着 IDE 写代码', link: '/articles/programming-with-pixels-cua-software-engineering' },
             { text: 'CUA-SWE：当 AI 智能体遇上视觉软件工程', link: '/articles/cua-swe-visual-software-engineering' },
+            { text: '给麻麻搭一条录入管线：Meta Muse 与错题本', link: '/articles/muse-homework-pipeline' },
           ],
         },
         {

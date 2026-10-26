@@ -35,6 +35,7 @@ const DESC = {
   'xueersi-grade4-summer-s-challenge': '4 页 16 题，涵盖计算、方程、几何、计数、数论和行程，每题配参考解答。',
   'programming-with-pixels-cua-software-engineering': '论文解读：纯视觉操作 IDE 只有 22.9%，加两个文本 API 就跳到 50.7%——瓶颈不在推理，在视觉。',
   'cua-swe-visual-software-engineering': '论文解读：让 AI 同时写代码、看界面、做交互的基准测试，视觉反馈带来质的飞跃。',
+  'muse-homework-pipeline': '用 Meta Muse 给家里搭一条「拍照 → 错题本 → 上线」的录入管线，含权限配置、review 关口和还没实测出来的那几处。',
   'ff7-remake-walkthrough': '米德加的三十天：从克劳德觉醒到最终决战，完整剧情流程与任务指南。',
   'ff7-remake-combat-materia-guide': '力竭才是伤害公式：战斗系统深度解析与魔晶石 Build 搭配。',
   'd2-blizzard-sorceress-guide': '充能弹转新星，30 级洗点暴风雪，地狱稳定推进的开荒速查。',
