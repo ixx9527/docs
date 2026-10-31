@@ -1064,9 +1064,9 @@ BC 就是正方形的边长。**把 BM 看成 1 份，边长就是 4 份**：
 
 | 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| A | × | √ | √ | √ | × | √ | × | × | √ | × |
-| B | × | × | √ | √ | √ | × | √ | √ | × | × |
-| C | √ | × | √ | × | √ | √ | √ | × | √ | √ |
+| A | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> |
+| B | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> |
+| C | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> |
 
 ::: details 卷面上当时是什么情况
 
@@ -1118,7 +1118,7 @@ B 和 C 不一样：第 1、4、6、8、9、10 题 → 6 道；一样的第 2、
 
 | 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 正确答案 | × | × | √ | √ | √ | √ | √ | × | √ | × |
+| 正确答案 | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> |
 
 **验算**（回代三人答卷，每人都要恰好错 3 道）
 
@@ -1129,7 +1129,7 @@ C 错在：第 1、4、10 题 → 3 道 ✓
 ```
 :::
 
-**一句话错因**：这题一道一道猜是猜不出来的，入口是**"两人合起来只能错 6 道"这个总数**。先数出 A、B 答案不同的正好 6 道——每道必有一错，名额被占满，于是"答案相同的 4 道"自动全对。它和第 12 题是同一类本事：**先把能错的总数卡住，再拿这个总数去逼出每一题**，而不是先猜某一题谁对。
+**一句话错因**：这题一道一道猜是猜不出来的，入口是<strong>「两人合起来只能错 6 道」这个总数</strong>。先数出 A、B 答案不同的正好 6 道——每道必有一错，名额被占满，于是"答案相同的 4 道"自动全对。它和第 12 题是同一类本事：**先把能错的总数卡住，再拿这个总数去逼出每一题**，而不是先猜某一题谁对。
 
 **重做记录**
 

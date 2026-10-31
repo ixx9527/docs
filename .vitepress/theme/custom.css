@@ -512,3 +512,66 @@ details[data-answer-locked] {
   line-height: 2.15;
   letter-spacing: 0.02em;
 }
+
+/* ---------- 判断题符号（对 / 错） ---------- */
+/* 手机字体里的 U+221A 是「根号」——带一截长横头、笔画细，缩进表格格子几乎看不出
+   是个勾。这里不依赖任何字库字形，用两根定长笔画把勾和叉描出来，屏幕多大都一样。
+   正文只写 <span class="tf tf--yes"> 这类语义类名。 */
+.vp-doc .tf {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  vertical-align: middle;
+  font-size: 0; /* 源码里留的 √ / × 只作留档与检索用，不参与渲染 */
+}
+.vp-doc .tf--yes {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+.vp-doc .tf--no {
+  background: var(--aw-pen-soft);
+  color: var(--aw-pen);
+}
+.vp-doc .tf::before,
+.vp-doc .tf::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+/* 勾：短臂从左上落到底，长臂斜拉右上，写成不对称才像手打的 √ */
+.vp-doc .tf--yes::after {
+  height: 7px;
+  transform: translate(-50%, -50%) translate(-2.5px, 2.5px) rotate(-45deg);
+}
+.vp-doc .tf--yes::before {
+  height: 12px;
+  transform: translate(-50%, -50%) translate(3px, -0.5px) rotate(28deg);
+}
+/* 叉：两根等长笔画 ±45° */
+.vp-doc .tf--no::before {
+  height: 12px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.vp-doc .tf--no::after {
+  height: 12px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* 反推答卷表有 11 列，手机上按默认格宽放不下：凡是含判断题符号的表，
+   格子收窄并居中，首列（题号 / A / B / C）仍靠左。正文不用为此改标记。 */
+.vp-doc table:has(.tf) th,
+.vp-doc table:has(.tf) td {
+  padding: 8px 7px;
+  text-align: center;
+  white-space: nowrap;
+}
+.vp-doc table:has(.tf) th:first-child,
+.vp-doc table:has(.tf) td:first-child {
+  text-align: left;
+}
