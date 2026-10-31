@@ -26,6 +26,7 @@ const DESC = {
   'sudoku-advanced-techniques': '从逻辑学与组合数学出发，讲清 X-Wing、Swordfish、AIC、ALS 为什么有效。',
   'sudoku-pattern-recognition': '一套成本递增的扫描流程，帮你判断"此刻该用哪一种技巧"。',
   'mistakes-grade4-math-first': '只记当时没独立做出来的题：题干、卷面情况、四年级算术法正解、错因、重做记录。',
+  'mistakes-grade4-math-second': '《四上三单元复习（1）》收 10 条：单位三条、不肯算三条、竖式三条——卷面已订正过，所以按红圈判，不按答案判。',
   'heritage-fieldtrip-grand-canal': '四年级跨学科实践，从选目的地到写手账、做讲解的完整记录。',
   'heritage-grand-canal-video-script': '1–2 分钟讲解口播稿：主稿 480 字、四段加长料、7 个分镜与字幕，外加数字口径和读音避坑清单。',
   'essay-supermarket-grandma': '四年级写人习作，铅笔原稿与老师红笔批注并排呈现，反推批改到底在要求什么。',

@@ -6,3 +6,9 @@ node_modules/
 homeworks/
 .qwen/
 assets/
+
+# 卷面/作业原图一律不许进仓库：正确落点是 homeworks/mistakes/<学期>-<学科>/（已被上面的 homeworks/ 覆盖）。
+# 这一条只兜底"直接丢在仓库根目录"的情况，公开仓库里 push 一次就永久留在提交历史。
+IMG_*.jpg
+IMG_*.jpeg
+IMG_*.png
