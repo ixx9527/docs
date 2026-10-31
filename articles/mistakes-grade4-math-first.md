@@ -1064,9 +1064,9 @@ BC 就是正方形的边长。**把 BM 看成 1 份，边长就是 4 份**：
 
 | 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| A | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> |
-| B | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> |
-| C | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> |
+| A | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> |
+| B | <span class="tf tf--no">✗</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--no">✗</span> |
+| C | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> |
 
 ::: details 卷面上当时是什么情况
 
@@ -1118,7 +1118,7 @@ B 和 C 不一样：第 1、4、6、8、9、10 题 → 6 道；一样的第 2、
 
 | 题号 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 正确答案 | <span class="tf tf--no">×</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> | <span class="tf tf--yes">√</span> | <span class="tf tf--no">×</span> |
+| 正确答案 | <span class="tf tf--no">✗</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> | <span class="tf tf--yes">✓</span> | <span class="tf tf--no">✗</span> |
 
 **验算**（回代三人答卷，每人都要恰好错 3 道）
 
