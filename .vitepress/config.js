@@ -31,6 +31,7 @@ export default defineConfig({
         text: '语文',
         items: [
           { text: '作文：我的超市达人', link: '/articles/essay-supermarket-grandma' },
+          { text: '作文：我和精卫过一天', link: '/articles/essay-jingwei-one-day' },
           { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
           { text: '日记：绿豆成长记录', link: '/articles/diary-mung-bean-observation' },
         ],
@@ -95,6 +96,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '作文：我的超市达人——奶奶', link: '/articles/essay-supermarket-grandma' },
+            { text: '作文：我和精卫过一天', link: '/articles/essay-jingwei-one-day' },
             { text: '周记：第一次做龙井虾仁', link: '/articles/essay-longjing-shrimp' },
             { text: '日记：绿豆成长记录', link: '/articles/diary-mung-bean-observation' },
           ],
