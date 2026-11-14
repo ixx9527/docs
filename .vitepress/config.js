@@ -41,6 +41,7 @@ export default defineConfig({
         items: [
           { text: '三问四年级 · 计算与方程专项 30 题', link: '/articles/sanwen-grade4-computation-drills' },
           { text: '三问四年级数学入学测试卷精解', link: '/articles/sanwen-grade4-math-entry-test' },
+          { text: '三问四年级 · 学能巩固（八）错题讲解', link: '/articles/sanwen-grade4-a4-8-review' },
           { text: '学而思 2026 四暑 S 思维闯关', link: '/articles/xueersi-grade4-summer-s-challenge' },
         ],
       },
@@ -107,6 +108,7 @@ export default defineConfig({
           items: [
             { text: '三问四年级 · 计算与方程专项 30 题', link: '/articles/sanwen-grade4-computation-drills' },
             { text: '三问四年级数学入学测试卷（S 卷-1）精解', link: '/articles/sanwen-grade4-math-entry-test' },
+            { text: '三问四年级 · 学能巩固（八）错题讲解', link: '/articles/sanwen-grade4-a4-8-review' },
             { text: '学而思 2026 四暑 S 思维闯关', link: '/articles/xueersi-grade4-summer-s-challenge' },
           ],
         },
