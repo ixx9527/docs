@@ -118,7 +118,7 @@ S△DGE = S△AGE
 <svg width="380" height="260" viewBox="0 0 380 260" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="18">
   <!-- 直角三角形 ABC，直角在 B -->
   <polygon points="60,220 320,220 320,60" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 正方形 BDOE -->
+  <!-- 正方形 BDOE，边长约 100 -->
   <rect x="220" y="120" width="100" height="100" fill="none" stroke="currentColor" stroke-width="1"/>
   <!-- 阴影三角形 ADO -->
   <polygon points="60,220 220,220 220,120" fill="currentColor" opacity="0.15"/>
@@ -131,12 +131,12 @@ S△DGE = S△AGE
     <text x="335" y="50">C</text>
     <text x="210" y="235">D</text>
     <text x="335" y="130">E</text>
-    <text x="230" y="110">O</text>
+    <text x="205" y="110">O</text>
   </g>
-  <!-- 尺寸标注 -->
+  <!-- 尺寸标注（移到阴影外） -->
   <g fill="currentColor" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="130" y="200" text-anchor="middle">AO = 10</text>
-    <text x="290" y="85" text-anchor="middle">CO = 6</text>
+    <text x="120" y="155" text-anchor="middle">AO=10</text>
+    <text x="285" y="75" text-anchor="middle">CO=6</text>
   </g>
   <!-- 直角标记 -->
   <rect x="305" y="205" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1"/>
