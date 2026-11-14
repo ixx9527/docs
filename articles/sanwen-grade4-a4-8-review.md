@@ -23,35 +23,38 @@ search: false
 > 如图，在长方形 ABCD 中，EF 与 AD 平行，对角线 AC 与 EF 相交于点 G，连结 DG、DE、BG。如果 BE=10，AE=6，BC=24，则图中阴影部分的面积为（ ）。
 
 <svg width="420" height="280" viewBox="0 0 420 280" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="18">
-  <!-- 长方形 ABCD -->
-  <rect x="40" y="40" width="340" height="200" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- EF 水平线 -->
-  <line x1="40" y1="160" x2="380" y2="160" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- 对角线 AC -->
-  <line x1="40" y1="40" x2="380" y2="240" stroke="currentColor" stroke-width="1"/>
-  <!-- DG, DE, BG -->
-  <line x1="380" y1="40" x2="175" y2="160" stroke="currentColor" stroke-width="1"/>
-  <line x1="380" y1="40" x2="40" y2="160" stroke="currentColor" stroke-width="1"/>
-  <line x1="40" y1="240" x2="175" y2="160" stroke="currentColor" stroke-width="1"/>
+  <!-- 长方形 ABCD: A(60,60) B(60,260) C(380,260) D(380,60) -->
+  <rect x="60" y="60" width="320" height="200" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <!-- EF 水平线：AE=6, AB=16, 所以 E 在 y=60+75=135 -->
+  <line x1="60" y1="135" x2="380" y2="135" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- 对角线 AC: A(60,60) to C(380,260) -->
+  <line x1="60" y1="60" x2="380" y2="260" stroke="currentColor" stroke-width="1"/>
+  <!-- G = AC ∩ EF: 在 y=135 时，x=60+0.375*320=180 -->
+  <!-- DG: D(380,60) to G(180,135) -->
+  <line x1="380" y1="60" x2="180" y2="135" stroke="currentColor" stroke-width="1"/>
+  <!-- DE: D(380,60) to E(60,135) -->
+  <line x1="380" y1="60" x2="60" y2="135" stroke="currentColor" stroke-width="1"/>
+  <!-- BG: B(60,260) to G(180,135) -->
+  <line x1="60" y1="260" x2="180" y2="135" stroke="currentColor" stroke-width="1"/>
   <!-- 阴影三角形 DGE -->
-  <polygon points="380,40 175,160 40,160" fill="currentColor" opacity="0.15"/>
+  <polygon points="380,60 180,135 60,135" fill="currentColor" opacity="0.15"/>
   <!-- 阴影三角形 BGE -->
-  <polygon points="40,240 175,160 40,160" fill="currentColor" opacity="0.15"/>
+  <polygon points="60,260 180,135 60,135" fill="currentColor" opacity="0.15"/>
   <!-- 顶点标签 -->
   <g fill="currentColor" text-anchor="middle" font-size="16">
-    <text x="30" y="35">A</text>
-    <text x="30" y="255">B</text>
-    <text x="395" y="255">C</text>
-    <text x="395" y="35">D</text>
-    <text x="25" y="165">E</text>
-    <text x="395" y="165">F</text>
-    <text x="175" y="150">G</text>
+    <text x="45" y="55">A</text>
+    <text x="45" y="275">B</text>
+    <text x="395" y="275">C</text>
+    <text x="395" y="55">D</text>
+    <text x="45" y="140">E</text>
+    <text x="395" y="140">F</text>
+    <text x="180" y="125">G</text>
   </g>
   <!-- 尺寸标注 -->
   <g fill="currentColor" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="15" y="100" text-anchor="middle">6</text>
-    <text x="15" y="205" text-anchor="middle">10</text>
-    <text x="210" y="270" text-anchor="middle">BC = 24</text>
+    <text x="30" y="100" text-anchor="middle">6</text>
+    <text x="30" y="200" text-anchor="middle">10</text>
+    <text x="220" y="278" text-anchor="middle">BC = 24</text>
   </g>
 </svg>
 
