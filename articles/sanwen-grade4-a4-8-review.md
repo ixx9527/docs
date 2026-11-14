@@ -419,26 +419,42 @@ S△DGE = S△AGE
 
 **答案：9 个**
 
-**俯视网格（数字 = 该位置叠几块）**：
+**3D 等距视图**（共 9 块）：
+
+<svg width="140" height="110" viewBox="0 0 140 110" style="display:block;margin:12px auto">
+  <!-- 9 cubes, back-to-front bottom-to-top order -->
+  <!-- (2,2,0) right-back -->
+  <polygon points="64,52 88,52 88,76 64,76" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="64,52 88,52 100,40 76,40" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="88,76 88,52 100,40 100,64" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,0) middle-middle bottom -->
+  <polygon points="52,64 76,64 76,88 52,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="52,64 76,64 88,52 64,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="76,88 76,64 88,52 88,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,1,0) right-middle bottom -->
+  <polygon points="76,64 100,64 100,88 76,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="76,64 100,64 112,52 88,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="100,88 100,64 112,52 112,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,0) left-front -->
+  <polygon points="40,76 64,76 64,100 40,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="40,76 64,76 76,64 52,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="64,100 64,76 76,64 76,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,0,0) middle-front -->
+  <polygon points="64,76 88,76 88,100 64,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="64,76 88,76 100,64 76,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="88,100 88,76 100,64 100,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,0,0) right-front -->
+  <polygon points="88,76 112,76 112,100 88,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="88,76 112,76 124,64 100,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="112,100 112,76 124,64 124,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,1) middle-middle 2nd -->
+  <polygon points="52,40 76,40 76,64 52,64" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="52,40 76,40 88,28 64,28" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="76,64 76,40 88,28 88,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,1,1) right-middle 2nd -->
+  <polygon points="76,40 100,40 100,64 76,64" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="76,40 100,40 112,28 88,28" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="100,64 100,40 112,28 112,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,1,2) right-middle 3rd -->
+  <polygon points="76,16 100,16 100,40 76,40" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/><polygon points="76,16 100,16 112,4 88,4" fill="#e0f0f8" stroke="#999" stroke-width="0.5"/><polygon points="100,40 100,16 112,4 112,28" fill="#b8d8e8" stroke="#999" stroke-width="0.5"/>
+</svg>
+
+**俯视网格**（数字 = 该位置叠几块）：
 
 ```
         左    中    右
     ┌─────┬─────┬─────┐
-后  │     │     │  1  │  ← 左面后排高 1
+后  │     │     │  1  │
     ├─────┼─────┼─────┤
-中  │     │  2  │  3  │  ← 左面中排高 3
+中  │     │  2  │  3  │
     ├─────┼─────┼─────┤
-前  │  1  │  1  │  1  │  ← 左面前排高 1
+前  │  1  │  1  │  1  │
     └─────┴─────┴─────┘
-      ↑     ↑     ↑
-     正面  正面  正面
-      1     2     3
 ```
-
-**验证**：
-- 正面右列最高 = 3 ✓（右中格 = 3）
-- 左面中排最高 = 3 ✓（右中格 = 3）
-- 其余列/行的最大值均满足
 
 **总数 = 1+1+1+2+3+1 = 9**
 
@@ -533,44 +549,59 @@ S△DGE = S△AGE
 | 中中 | 2 | 2 | **2** |
 | 右中 | 1 | 2 | **1** |
 
-**(1) 最多个数：每格取上限**
+**(1) 最多个数：每格取上限（11 块）**
 
-```
-        左    中    右
-    ┌─────┬─────┬─────┐
-中  │  2  │  2  │  1  │
-    ├─────┼─────┼─────┤
-前  │  3  │  2  │  1  │
-    └─────┴─────┴─────┘
-```
+<svg width="150" height="110" viewBox="0 0 150 110" style="display:block;margin:12px auto">
+  <!-- 11 cubes, max configuration -->
+  <!-- (0,1,0) left-middle bottom -->
+  <polygon points="52,64 76,64 76,88 52,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="52,64 76,64 88,52 64,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="76,88 76,64 88,52 88,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,1,1) left-middle 2nd -->
+  <polygon points="52,40 76,40 76,64 52,64" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="52,40 76,40 88,28 64,28" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="76,64 76,40 88,28 88,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,0) middle-middle bottom -->
+  <polygon points="76,64 100,64 100,88 76,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="76,64 100,64 112,52 88,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="100,88 100,64 112,52 112,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,1) middle-middle 2nd -->
+  <polygon points="76,40 100,40 100,64 76,64" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="76,40 100,40 112,28 88,28" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="100,64 100,40 112,28 112,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,1,0) right-middle bottom -->
+  <polygon points="100,64 124,64 124,88 100,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="100,64 124,64 136,52 112,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="124,88 124,64 136,52 136,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,0) left-front bottom -->
+  <polygon points="40,76 64,76 64,100 40,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="40,76 64,76 76,64 52,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="64,100 64,76 76,64 76,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,1) left-front 2nd -->
+  <polygon points="40,52 64,52 64,76 40,76" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="40,52 64,52 76,40 52,40" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="64,76 64,52 76,40 76,64" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,2) left-front 3rd -->
+  <polygon points="40,28 64,28 64,52 40,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/><polygon points="40,28 64,28 76,16 52,16" fill="#e0f0f8" stroke="#999" stroke-width="0.5"/><polygon points="64,52 64,28 76,16 76,40" fill="#b8d8e8" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,0,0) middle-front bottom -->
+  <polygon points="64,76 88,76 88,100 64,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="64,76 88,76 100,64 76,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="88,100 88,76 100,64 100,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,0,1) middle-front 2nd -->
+  <polygon points="64,52 88,52 88,76 64,76" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="64,52 88,52 100,40 76,40" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="88,76 88,52 100,40 100,64" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,0,0) right-front bottom -->
+  <polygon points="88,76 112,76 112,100 88,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="88,76 112,76 124,64 100,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="112,100 112,76 124,64 124,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+</svg>
 
 **最多 = 3+2+1+2+2+1 = 11 个**
 
-**(2) 最少个数：满足约束的前提下尽量取 1**
+**(2) 最少个数：满足约束的前提下尽量取 1（9 块）**
 
-约束分析：
-- 正面左列=3 → 左前或左中=3。但左中≤2，所以**左前=3**（强制）
-- 正面右列=1 → 右前和右中上限都是 1，所以**都=1**（强制）
-- 正面中列=2 → 中前或中中=2
-- 左面中排=2 → 左中或中中或右中=2（右中=1 已定）
-
-**最省放法**：让中中=2，同时满足两个约束，其余取 1：
-
-```
-        左    中    右
-    ┌─────┬─────┬─────┐
-中  │  1  │  2  │  1  │
-    ├─────┼─────┼─────┤
-前  │  3  │  1  │  1  │
-    └─────┴─────┴─────┘
-```
-
-验证：
-- 正面左列：max(3,1)=3 ✓
-- 正面中列：max(1,2)=2 ✓
-- 正面右列：max(1,1)=1 ✓
-- 左面前排：max(3,1,1)=3 ✓
-- 左面中排：max(1,2,1)=2 ✓
+<svg width="150" height="110" viewBox="0 0 150 110" style="display:block;margin:12px auto">
+  <!-- 9 cubes, min configuration -->
+  <!-- (0,1,0) left-middle -->
+  <polygon points="52,64 76,64 76,88 52,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="52,64 76,64 88,52 64,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="76,88 76,64 88,52 88,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,0) middle-middle bottom -->
+  <polygon points="76,64 100,64 100,88 76,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="76,64 100,64 112,52 88,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="100,88 100,64 112,52 112,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,1,1) middle-middle 2nd -->
+  <polygon points="76,40 100,40 100,64 76,64" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="76,40 100,40 112,28 88,28" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="100,64 100,40 112,28 112,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,1,0) right-middle -->
+  <polygon points="100,64 124,64 124,88 100,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="100,64 124,64 136,52 112,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="124,88 124,64 136,52 136,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,0) left-front bottom -->
+  <polygon points="40,76 64,76 64,100 40,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="40,76 64,76 76,64 52,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="64,100 64,76 76,64 76,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,1) left-front 2nd -->
+  <polygon points="40,52 64,52 64,76 40,76" fill="#e8f4f8" stroke="#999" stroke-width="0.5"/><polygon points="40,52 64,52 76,40 52,40" fill="#f0f8ff" stroke="#999" stroke-width="0.5"/><polygon points="64,76 64,52 76,40 76,64" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/>
+  <!-- (0,0,2) left-front 3rd -->
+  <polygon points="40,28 64,28 64,52 40,52" fill="#d0e8f0" stroke="#999" stroke-width="0.5"/><polygon points="40,28 64,28 76,16 52,16" fill="#e0f0f8" stroke="#999" stroke-width="0.5"/><polygon points="64,52 64,28 76,16 76,40" fill="#b8d8e8" stroke="#999" stroke-width="0.5"/>
+  <!-- (1,0,0) middle-front -->
+  <polygon points="64,76 88,76 88,100 64,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="64,76 88,76 100,64 76,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="88,100 88,76 100,64 100,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+  <!-- (2,0,0) right-front -->
+  <polygon points="88,76 112,76 112,100 88,100" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="88,76 112,76 124,64 100,64" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="112,100 112,76 124,64 124,88" fill="#ddd" stroke="#999" stroke-width="0.5"/>
+</svg>
 
 **最少 = 3+1+1+1+2+1 = 9 个**
 
