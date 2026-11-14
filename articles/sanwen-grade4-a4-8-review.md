@@ -67,11 +67,11 @@ D 和 A 都在顶边 AD 上，而 AD∥EF。所以 D、A 到直线 EF 的距离�
 
 △DGE 和 △AGE **共底 GE，顶点在平行于底的直线上** → 面积相等：
 
-$$S_{\triangle DGE} = S_{\triangle AGE}$$
+S△DGE = S△AGE
 
 **第三步：阴影 = △AGB。**
 
-$$\text{阴影} = S_{\triangle DGE} + S_{\triangle BGE} = S_{\triangle AGE} + S_{\triangle BGE} = S_{\triangle AGB}$$
+阴影 = S△DGE + S△BGE = S△AGE + S△BGE = S△AGB
 
 （因为 E 在线段 AB 上，△AGE 和 △BGE 拼起来就是 △AGB。）
 
@@ -94,8 +94,8 @@ $$\text{阴影} = S_{\triangle DGE} + S_{\triangle BGE} = S_{\triangle AGE} + S_
 **简洁解法（等积变形）**：
 
 1. 阴影 = △DGE + △BGE，共底 GE
-2. AD∥EF → D、A 到 EF 距离相等 → $S_{\triangle DGE} = S_{\triangle AGE}$
-3. 阴影 = $S_{\triangle AGE} + S_{\triangle BGE} = S_{\triangle AGB}$（E 在 AB 上，两三角形拼成 △AGB）
+2. AD∥EF → D、A 到 EF 距离相等 → S△DGE = S△AGE
+3. 阴影 = S△AGE + S△BGE = S△AGB（E 在 AB 上，两三角形拼成 △AGB）
 4. △ABC = ½ × 16 × 24 = 192（矩形一半）
 5. △BGC = ½ × 24 × 10 = 120（G 在 EF 上，到 BC 距离 = 10）
 6. △AGB = 192 − 120 = **72**
@@ -145,7 +145,7 @@ $$\text{阴影} = S_{\triangle DGE} + S_{\triangle BGE} = S_{\triangle AGE} + S_
 
 正方形的角 ∠DOE = 90°。A、O、C 三点共线（O 在斜边 AC 上），所以 ∠AOD + ∠DOE + ∠COE = 180°（平角）。
 
-$$\angle AOD + \angle COE = 180° - 90° = 90°$$
+∠AOD + ∠COE = 180° − 90° = 90°
 
 **第 (2) 问：旋转法——把两块阴影拼成一个直角三角形。**
 
@@ -159,7 +159,7 @@ $$\angle AOD + \angle COE = 180° - 90° = 90°$$
 
 于是 △A'OC 是直角三角形，两直角边 OA' = 10、OC = 6：
 
-$$\text{面积} = \frac{1}{2}\times 10\times 6 = 30$$
+面积 = ½ × 10 × 6 = 30
 
 而 △A'OC = △A'OE + △COE = **△ADO + △COE**（因为 △A'OE ≅ △ADO）= 阴影面积。
 
