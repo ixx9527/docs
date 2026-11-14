@@ -61,32 +61,29 @@ search: false
 
 阴影 = △DGE + △BGE。两个三角形**共用底 GE**（GE 在水平线 EF 上）。
 
-**第二步：分别写出两个三角形的面积。**
+**第二步：等积变形——把 △DGE 换成 △AGE。**
 
-- △DGE 的高 = D 到直线 EF 的距离 = **AE = 6**（因为 EF∥AD，D 在 AD 上）
-- △BGE 的高 = B 到直线 EF 的距离 = **BE = 10**（因为 EF∥BC，B 在 BC 上）
+D 和 A 都在顶边 AD 上，而 AD∥EF。所以 D、A 到直线 EF 的距离相等（都等于 AE = 6）。
 
-$$\text{阴影} = \frac{1}{2}\cdot GE\cdot 6 + \frac{1}{2}\cdot GE\cdot 10 = \frac{1}{2}\cdot GE\cdot 16 = 8\cdot GE$$
+△DGE 和 △AGE **共底 GE，顶点在平行于底的直线上** → 面积相等：
 
-现在只差 GE 的长度。
+$$S_{\triangle DGE} = S_{\triangle AGE}$$
 
-**第三步：间接求 GE——用"矩形一半减已知三角形"。**
+**第三步：阴影 = △AGB。**
+
+$$\text{阴影} = S_{\triangle DGE} + S_{\triangle BGE} = S_{\triangle AGE} + S_{\triangle BGE} = S_{\triangle AGB}$$
+
+（因为 E 在线段 AB 上，△AGE 和 △BGE 拼起来就是 △AGB。）
+
+**第四步：求 △AGB 的面积。**
 
 看△ABC（矩形的一半，面积 = ½ × 16 × 24 = 192）。G 在对角线 AC 上，连 BG：
 
 - △BGC 的底 BC = 24，高 = G 到 BC 的距离 = BE = 10（G 在 EF 上，EF 距 BC 为 10）
 - △BGC 面积 = ½ × 24 × 10 = **120**
-- 所以 △ABG = 192 − 120 = **72**
+- 所以 △AGB = 192 − 120 = **72**
 
-**第四步：从 △ABG 反推 GE。**
-
-△ABG 以 AB = 16 为底，高 = G 到 AB 的距离 = **GE**（因为 G 在 EF 上，E 在 AB 上，GE⊥AB）：
-
-$$\frac{1}{2}\times 16\times GE = 72 \Rightarrow GE = 9$$
-
-**第五步：代入。**
-
-阴影 = 8 × 9 = **72 平方厘米**
+**阴影 = 72 平方厘米**
 
 :::
 
@@ -94,18 +91,16 @@ $$\frac{1}{2}\times 16\times GE = 72 \Rightarrow GE = 9$$
 
 **答案：72 平方厘米**
 
-完整推导：
+**简洁解法（等积变形）**：
 
 1. 阴影 = △DGE + △BGE，共底 GE
-2. △DGE 高 = AE = 6，△BGE 高 = BE = 10
-3. 阴影 = ½ × GE × (6+10) = 8·GE
-4. △ABC = ½ × 16 × 24 = 192
+2. AD∥EF → D、A 到 EF 距离相等 → $S_{\triangle DGE} = S_{\triangle AGE}$
+3. 阴影 = $S_{\triangle AGE} + S_{\triangle BGE} = S_{\triangle AGB}$（E 在 AB 上，两三角形拼成 △AGB）
+4. △ABC = ½ × 16 × 24 = 192（矩形一半）
 5. △BGC = ½ × 24 × 10 = 120（G 在 EF 上，到 BC 距离 = 10）
-6. △ABG = 192 − 120 = 72
-7. △ABG = ½ × AB × GE = ½ × 16 × GE = 8·GE = 72 → GE = 9
-8. 阴影 = 8 × 9 = **72**
+6. △AGB = 192 − 120 = **72**
 
-**易错提醒**：这题最容易卡在"怎么求 GE"。直接求要用相似三角形（四年级没学），所以要绕一下——通过 △ABG 的面积间接得到 GE。这就是**等积变形**的核心：不直接算目标，而是把它转化成一个好算的图形。
+**易错提醒**：这题最容易卡在"怎么求 GE"。其实根本不需要求 GE——用等积变形把 △DGE 换成 △AGE，阴影直接变成 △AGB，而 △AGB = 矩形一半 − △BGC，两步就出来了。这就是**等积变形**的威力：不直接算目标，而是把它转化成一个好算的图形。
 
 :::
 
