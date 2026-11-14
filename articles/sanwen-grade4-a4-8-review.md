@@ -115,31 +115,48 @@ S△DGE = S△AGE
 > (1) ∠AOD+∠COE= \_\_\_\_\_\_ °。
 > (2) 两个阴影三角形的面积总和是 \_\_\_\_\_\_ 平方厘米。
 
-<svg width="380" height="260" viewBox="0 0 380 260" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="18">
-  <!-- 直角三角形 ABC，直角在 B -->
-  <polygon points="60,220 320,220 320,60" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <!-- 正方形 BDOE，边长约 100 -->
-  <rect x="220" y="120" width="100" height="100" fill="none" stroke="currentColor" stroke-width="1"/>
-  <!-- 阴影三角形 ADO -->
-  <polygon points="60,220 220,220 220,120" fill="currentColor" opacity="0.15"/>
-  <!-- 阴影三角形 COE -->
-  <polygon points="320,60 320,120 220,120" fill="currentColor" opacity="0.15"/>
+<svg width="420" height="300" viewBox="0 0 420 300" style="display:block;margin:12px auto" font-family="Georgia, 'Times New Roman', serif" font-size="18">
+  <!-- 原图（淡色） -->
+  <g opacity="0.4">
+    <!-- 直角三角形 ABC -->
+    <polygon points="60,240 320,240 320,80" fill="none" stroke="currentColor" stroke-width="1"/>
+    <!-- 正方形 BDOE -->
+    <rect x="220" y="140" width="100" height="100" fill="none" stroke="currentColor" stroke-width="1"/>
+    <!-- 原阴影 △ADO -->
+    <polygon points="60,240 220,240 220,140" fill="currentColor" opacity="0.3"/>
+    <!-- 原阴影 △COE -->
+    <polygon points="320,80 320,140 220,140" fill="currentColor" opacity="0.3"/>
+  </g>
+  <!-- 旋转后的 △A'OE（实线） -->
+  <polygon points="320,240 320,140 220,140" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.5"/>
+  <!-- 旋转后 A' 的位置：A' = (320, 240) -->
+  <!-- 直角三角形 A'OC -->
+  <polygon points="320,240 220,140 320,80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6,3"/>
+  <!-- 直角标记 at O -->
+  <rect x="230" y="150" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(45 236 156)"/>
   <!-- 顶点标签 -->
   <g fill="currentColor" text-anchor="middle" font-size="16">
-    <text x="45" y="235">A</text>
-    <text x="335" y="235">B</text>
-    <text x="335" y="50">C</text>
-    <text x="210" y="235">D</text>
-    <text x="335" y="130">E</text>
-    <text x="205" y="110">O</text>
+    <text x="45" y="255">A</text>
+    <text x="335" y="255">B</text>
+    <text x="335" y="70">C</text>
+    <text x="210" y="255">D</text>
+    <text x="335" y="150">E</text>
+    <text x="205" y="130">O</text>
+    <text x="335" y="260">A'</text>
   </g>
-  <!-- 尺寸标注（移到阴影外） -->
+  <!-- 尺寸标注 -->
   <g fill="currentColor" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
-    <text x="120" y="155" text-anchor="middle">AO=10</text>
-    <text x="285" y="75" text-anchor="middle">CO=6</text>
+    <text x="270" y="195" text-anchor="middle">OA'=10</text>
+    <text x="285" y="105" text-anchor="middle">OC=6</text>
   </g>
-  <!-- 直角标记 -->
-  <rect x="305" y="205" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1"/>
+  <!-- 旋转箭头 -->
+  <path d="M 140,190 Q 160,160 190,155" fill="none" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="130" y="210" font-size="12" fill="currentColor" font-family="PingFang SC, Microsoft YaHei, sans-serif">绕 O 顺时针旋转 90°</text>
 </svg>
 
 ::: details 思路分析
