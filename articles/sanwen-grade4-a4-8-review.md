@@ -371,19 +371,56 @@ S△DGE = S△AGE
 
 ::: details 思路分析
 
-**三视图描述**（用电话拨号盘坐标，1=左上，9=右下）：
+**三视图**（每个小方格代表一个单位）：
 
-| 视图 | 拨号盘位置 | 形状 |
-| --- | --- | --- |
-| 左面 | 2, 5, 7, 8, 9 | 中列上下贯通 + 底排全满 |
-| 上面 | 3, 5, 6, 7, 8, 9 | 右下三角（反对角线切分） |
-| 正面 | 3, 5, 6, 7, 8, 9 | 同上面，右下三角 |
+<svg width="360" height="130" viewBox="0 0 360 130" style="display:block;margin:12px auto" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <!-- 正面图 -->
+  <text x="60" y="12" fill="#333" text-anchor="middle" font-weight="bold">正面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="20" y="20" width="80" height="80"/>
+    <line x1="47" y1="20" x2="47" y2="100"/><line x1="73" y1="20" x2="73" y2="100"/>
+    <line x1="20" y1="47" x2="100" y2="47"/><line x1="20" y1="73" x2="100" y2="73"/>
+  </g>
+  <rect x="73" y="20" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="73" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="73" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="47" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="47" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="20" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+
+  <!-- 左面图 -->
+  <text x="180" y="12" fill="#333" text-anchor="middle" font-weight="bold">左面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="140" y="20" width="80" height="80"/>
+    <line x1="167" y1="20" x2="167" y2="100"/><line x1="193" y1="20" x2="193" y2="100"/>
+    <line x1="140" y1="47" x2="220" y2="47"/><line x1="140" y1="73" x2="220" y2="73"/>
+  </g>
+  <rect x="167" y="20" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="167" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="140" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="167" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="193" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+
+  <!-- 上面图 -->
+  <text x="300" y="12" fill="#333" text-anchor="middle" font-weight="bold">上面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="260" y="20" width="80" height="80"/>
+    <line x1="287" y1="20" x2="287" y2="100"/><line x1="313" y1="20" x2="313" y2="100"/>
+    <line x1="260" y1="47" x2="340" y2="47"/><line x1="260" y1="73" x2="340" y2="73"/>
+  </g>
+  <rect x="313" y="20" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="287" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="313" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="260" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="287" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="313" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+</svg>
 
 **方法：画俯视网格，每格填数字（该位置叠几块）。**
 
 **第一步：画上面图的 footprint（哪些格子有方块）。**
 
-根据上面图（拨号盘 3,5,6,7,8,9），后排只有右格、中排中右两格、前排三格全满：
+从上面图可以看出：后排只有右格、中排中右两格、前排三格全满：
 
 <svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
   <g stroke="#999" stroke-width="1" fill="none">
@@ -501,19 +538,56 @@ S△DGE = S△AGE
 
 ::: details 思路分析
 
-**三视图描述**（用电话拨号盘坐标）：
+**三视图**（每个小方格代表一个单位）：
 
-| 视图 | 拨号盘位置 | 形状 |
-| --- | --- | --- |
-| 左面 | 1, 4, 5, 7, 8 | 左列上下贯通 + 中列下两格 |
-| 上面 | 4, 5, 6, 7, 8, 9 | 前两排全满，后排无 |
-| 正面 | 1, 4, 5, 7, 8, 9 | 左列全满 + 中列下两格 + 右列底格 |
+<svg width="360" height="130" viewBox="0 0 360 130" style="display:block;margin:12px auto" font-size="12" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <!-- 正面图 -->
+  <text x="60" y="12" fill="#333" text-anchor="middle" font-weight="bold">正面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="20" y="20" width="80" height="80"/>
+    <line x1="47" y1="20" x2="47" y2="100"/><line x1="73" y1="20" x2="73" y2="100"/>
+    <line x1="20" y1="47" x2="100" y2="47"/><line x1="20" y1="73" x2="100" y2="73"/>
+  </g>
+  <rect x="20" y="20" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="20" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="47" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="20" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="47" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="73" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+
+  <!-- 左面图 -->
+  <text x="180" y="12" fill="#333" text-anchor="middle" font-weight="bold">左面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="140" y="20" width="80" height="80"/>
+    <line x1="167" y1="20" x2="167" y2="100"/><line x1="193" y1="20" x2="193" y2="100"/>
+    <line x1="140" y1="47" x2="220" y2="47"/><line x1="140" y1="73" x2="220" y2="73"/>
+  </g>
+  <rect x="140" y="20" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="140" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="167" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="140" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="167" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+
+  <!-- 上面图 -->
+  <text x="300" y="12" fill="#333" text-anchor="middle" font-weight="bold">上面图</text>
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="260" y="20" width="80" height="80"/>
+    <line x1="287" y1="20" x2="287" y2="100"/><line x1="313" y1="20" x2="313" y2="100"/>
+    <line x1="260" y1="47" x2="340" y2="47"/><line x1="260" y1="73" x2="340" y2="73"/>
+  </g>
+  <rect x="260" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="287" y="47" width="26" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="313" y="47" width="27" height="26" fill="#4CAF50" opacity="0.4"/>
+  <rect x="260" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="287" y="73" width="26" height="27" fill="#4CAF50" opacity="0.4"/>
+  <rect x="313" y="73" width="27" height="27" fill="#4CAF50" opacity="0.4"/>
+</svg>
 
 **方法：和第 4 题一样，但这次问"最多"和"最少"。**
 
 **第一步：画上面图的 footprint。**
 
-根据上面图（拨号盘 4,5,6,7,8,9），前两排（前排 + 中排）6 格全满，后排全空：
+从上面图可以看出：前两排（前排 + 中排）6 格全满，后排全空：
 
 <svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
   <g stroke="#999" stroke-width="1" fill="none">
