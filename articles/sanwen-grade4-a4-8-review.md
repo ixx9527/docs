@@ -383,15 +383,87 @@ S△DGE = S△AGE
 
 **第一步：画上面图的 footprint（哪些格子有方块）。**
 
-后排只有右格、中排中右两格、前排三格全满。
+根据上面图（拨号盘 3,5,6,7,8,9），后排只有右格、中排中右两格、前排三格全满：
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <rect x="110" y="20" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+  <rect x="70" y="53" width="40" height="34" fill="#4CAF50" opacity="0.3"/>
+  <rect x="110" y="53" width="40" height="34" fill="#4CAF50" opacity="0.3"/>
+  <rect x="30" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+  <rect x="70" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+  <rect x="110" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+</svg>
 
 **第二步：标出每格的高度上限。**
 
-每格高度 ≤ min(正面该列高，左面该行高)：左前/中前/右前上限都是 1（左面前排高 1 卡住了），中中上限 2，右中上限 3，右后上限 1。
+每格高度 ≤ min(正面该列高，左面该行高)。正面 [左=1, 中=2, 右=3]，左面 [后=1, 中=3, 前=1]：
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <text x="50" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="130" y="42" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="50" y="75" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="75" fill="#666" text-anchor="middle" font-weight="bold">2</text>
+  <text x="130" y="75" fill="#666" text-anchor="middle" font-weight="bold">3</text>
+  <text x="50" y="108" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="90" y="108" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="130" y="108" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="50" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 1</text>
+  <text x="90" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 2</text>
+  <text x="130" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 3</text>
+  <text x="165" y="42" fill="#FF9800" text-anchor="middle" font-size="11">左 1</text>
+  <text x="165" y="75" fill="#FF9800" text-anchor="middle" font-size="11">左 3</text>
+  <text x="165" y="108" fill="#FF9800" text-anchor="middle" font-size="11">左 1</text>
+</svg>
 
 **第三步：填入数字，加起来。**
 
 右中格必须 = 3（正面右列和左面中排都要求最高 3，只有它能到 3）；中中格必须 = 2；其余都是 1。
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <text x="50" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="130" y="42" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="50" y="75" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">2</text>
+  <text x="130" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">3</text>
+  <text x="50" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="90" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="130" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+</svg>
 
 **3D 等距视图**（共 9 块，蓝色 = 第 2 层及以上）：
 
@@ -441,13 +513,118 @@ S△DGE = S△AGE
 
 **第一步：画上面图的 footprint。**
 
-前两排（前排 + 中排）6 格全满，后排全空。
+根据上面图（拨号盘 4,5,6,7,8,9），前两排（前排 + 中排）6 格全满，后排全空：
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <rect x="30" y="53" width="40" height="34" fill="#4CAF50" opacity="0.3"/>
+  <rect x="70" y="53" width="40" height="34" fill="#4CAF50" opacity="0.3"/>
+  <rect x="110" y="53" width="40" height="34" fill="#4CAF50" opacity="0.3"/>
+  <rect x="30" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+  <rect x="70" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+  <rect x="110" y="87" width="40" height="33" fill="#4CAF50" opacity="0.3"/>
+</svg>
 
 **第二步：标出每格的高度上限。**
 
-左前/中前/右前/左中/中中/右中的上限分别为 3、2、1、2、2、1。
+正面 [左=3, 中=2, 右=1]，左面 [后=0, 中=2, 前=3]：
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <text x="50" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="130" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="50" y="75" fill="#666" text-anchor="middle" font-weight="bold">2</text>
+  <text x="90" y="75" fill="#666" text-anchor="middle" font-weight="bold">2</text>
+  <text x="130" y="75" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="50" y="108" fill="#666" text-anchor="middle" font-weight="bold">3</text>
+  <text x="90" y="108" fill="#666" text-anchor="middle" font-weight="bold">2</text>
+  <text x="130" y="108" fill="#666" text-anchor="middle" font-weight="bold">1</text>
+  <text x="50" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 3</text>
+  <text x="90" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 2</text>
+  <text x="130" y="10" fill="#2196F3" text-anchor="middle" font-size="11">正 1</text>
+  <text x="165" y="42" fill="#FF9800" text-anchor="middle" font-size="11">左 0</text>
+  <text x="165" y="75" fill="#FF9800" text-anchor="middle" font-size="11">左 2</text>
+  <text x="165" y="108" fill="#FF9800" text-anchor="middle" font-size="11">左 3</text>
+</svg>
 
 **第三步：最多个数——每格都取上限（11 块）。**
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <text x="50" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="130" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="50" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">2</text>
+  <text x="90" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">2</text>
+  <text x="130" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="50" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">3</text>
+  <text x="90" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">2</text>
+  <text x="130" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+</svg>
+
+最多 = 2+2+1+3+2+1 = **11**
+
+**第四步：最少个数——只放必要的，其余尽量取 1（9 块）。**
+
+左前必须 = 3（正面左列要求 3，左中上限只有 2，只能左前扛）；右前和右中上限都是 1，强制 = 1；中中 = 2 同时满足"正面中列=2"和"左面中排=2"。
+
+<svg width="180" height="140" viewBox="0 0 180 140" style="display:block;margin:12px auto" font-size="13" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="30" y="20" width="120" height="100"/>
+    <line x1="70" y1="20" x2="70" y2="120"/><line x1="110" y1="20" x2="110" y2="120"/>
+    <line x1="30" y1="53" x2="150" y2="53"/><line x1="30" y1="87" x2="150" y2="87"/>
+  </g>
+  <text x="10" y="42" fill="#666" text-anchor="middle">后</text>
+  <text x="10" y="75" fill="#666" text-anchor="middle">中</text>
+  <text x="10" y="108" fill="#666" text-anchor="middle">前</text>
+  <text x="50" y="135" fill="#666" text-anchor="middle">左</text>
+  <text x="90" y="135" fill="#666" text-anchor="middle">中</text>
+  <text x="130" y="135" fill="#666" text-anchor="middle">右</text>
+  <text x="50" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="90" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="130" y="42" fill="#999" text-anchor="middle">—</text>
+  <text x="50" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="90" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">2</text>
+  <text x="130" y="75" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="50" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">3</text>
+  <text x="90" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+  <text x="130" y="108" fill="#333" text-anchor="middle" font-size="18" font-weight="bold">1</text>
+</svg>
+
+最少 = 1+2+1+3+1+1 = **9**
+
+**3D 等距视图对比**（左=最多 11 块，右=最少 9 块）：
 
 <svg width="150" height="110" viewBox="0 0 150 110" style="display:block;margin:12px auto">
   <polygon points="52,64 76,64 76,88 52,88" fill="#f5f5f5" stroke="#999" stroke-width="0.5"/><polygon points="52,64 76,64 88,52 64,52" fill="#fff" stroke="#999" stroke-width="0.5"/><polygon points="76,88 76,64 88,52 88,76" fill="#ddd" stroke="#999" stroke-width="0.5"/>
