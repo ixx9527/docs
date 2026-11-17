@@ -2,7 +2,6 @@
 import { computed, ref } from 'vue'
 import { data as index } from '../data/articles.data.mjs'
 
-const COLLAPSE_AT = 4
 const NEW_WITHIN_DAYS = 14
 
 const pages = computed(() => index.pages || [])
@@ -37,14 +36,14 @@ const groups = computed(() => {
   return buckets
 })
 
-const expanded = ref(new Set())
+const openGroups = ref(new Set())
 function toggle(name) {
-  const next = new Set(expanded.value)
+  const next = new Set(openGroups.value)
   next.has(name) ? next.delete(name) : next.add(name)
-  expanded.value = next
+  openGroups.value = next
 }
-function visible(group) {
-  return expanded.value.has(group.name) ? group.items : group.items.slice(0, COLLAPSE_AT)
+function isOpen(name) {
+  return openGroups.value.has(name)
 }
 </script>
 
@@ -69,14 +68,28 @@ function visible(group) {
     </section>
 
     <div id="sections">
-      <section v-for="g in groups" :key="g.name" class="home-docs__section">
+      <section
+        v-for="g in groups"
+        :key="g.name"
+        class="home-docs__section"
+        :class="{ 'is-open': isOpen(g.name) }"
+      >
         <h2 class="home-docs__title">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path :d="ICONS[g.name] || ICONS['其它']" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>{{ g.name }}</span>
-          <em>{{ g.items.length }} 篇</em>
+          <button
+            type="button"
+            class="home-docs__toggle"
+            :aria-expanded="isOpen(g.name) ? 'true' : 'false'"
+            :aria-controls="'group-' + g.name"
+            @click="toggle(g.name)"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path :d="ICONS[g.name] || ICONS['其它']" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>{{ g.name }}</span>
+            <em>{{ g.items.length }} 篇</em>
+            <svg class="home-docs__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </h2>
-        <div class="home-docs__grid">
-          <a v-for="p in visible(g)" :key="g.name + '-' + p.slug" class="doc-card" :href="p.url">
+        <div v-show="isOpen(g.name)" :id="'group-' + g.name" class="home-docs__grid home-docs__grid--group">
+          <a v-for="p in g.items" :key="g.name + '-' + p.slug" class="doc-card" :href="p.url">
             <div class="doc-card__meta">
               <time v-if="p.date" :datetime="p.date">{{ p.date }}</time>
               <span v-if="isNew(p)" class="doc-card__new">新</span>
@@ -85,15 +98,6 @@ function visible(group) {
             <p class="doc-card__desc">{{ p.desc }}</p>
           </a>
         </div>
-        <button
-          v-if="g.items.length > COLLAPSE_AT"
-          type="button"
-          class="home-docs__more"
-          :aria-expanded="expanded.has(g.name) ? 'true' : 'false'"
-          @click="toggle(g.name)"
-        >
-          {{ expanded.has(g.name) ? '收起' : '还有 ' + (g.items.length - COLLAPSE_AT) + ' 篇，展开' }}
-        </button>
       </section>
     </div>
   </div>
@@ -111,7 +115,11 @@ function visible(group) {
 }
 
 .home-docs__section {
-  margin-bottom: 48px;
+  margin-bottom: 4px;
+}
+
+.home-docs__section.is-open {
+  margin-bottom: 40px;
 }
 
 .home-docs__section:last-child {
@@ -138,17 +146,47 @@ function visible(group) {
 }
 
 .home-docs__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   font-family: var(--vp-font-family-heading);
   font-size: 24px;
   font-weight: 600;
   color: var(--vp-c-text-1);
-  margin: 0 0 22px;
-  padding-bottom: 12px;
+  margin: 0;
   border-bottom: 2px dashed var(--vp-c-divider);
   letter-spacing: 1px;
+}
+
+.home-docs__toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-docs__toggle:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.home-docs__toggle:hover span,
+.home-docs__toggle:hover .home-docs__chev {
+  color: var(--vp-c-brand-1);
+}
+
+.home-docs__chev {
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.home-docs__section.is-open .home-docs__chev {
+  transform: rotate(180deg);
 }
 
 .home-docs__title svg {
@@ -156,6 +194,12 @@ function visible(group) {
   height: 26px;
   color: var(--vp-c-brand-1);
   flex-shrink: 0;
+}
+
+.home-docs__title .home-docs__chev {
+  width: 18px;
+  height: 18px;
+  color: var(--vp-c-text-3);
 }
 
 .home-docs__title em {
@@ -177,6 +221,10 @@ function visible(group) {
 .home-docs__grid--latest {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+}
+
+.home-docs__grid--group {
+  margin-top: 20px;
 }
 
 /*
@@ -277,27 +325,6 @@ function visible(group) {
   letter-spacing: 0.5px;
 }
 
-.home-docs__more {
-  display: block;
-  width: 100%;
-  margin-top: 16px;
-  padding: 9px 16px;
-  font-family: var(--vp-font-family-heading);
-  font-size: 14px;
-  letter-spacing: 0.6px;
-  color: var(--vp-c-text-2);
-  background: transparent;
-  border: 1px dashed var(--vp-c-border);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.home-docs__more:hover {
-  color: var(--vp-c-brand-1);
-  border-color: var(--vp-c-brand-1);
-}
-
 @media (max-width: 768px) {
   .home-docs {
     padding: 32px 16px 56px;
@@ -307,18 +334,26 @@ function visible(group) {
     margin-bottom: 40px;
   }
 
-  .home-docs__section {
-    margin-bottom: 36px;
+  .home-docs__section.is-open {
+    margin-bottom: 28px;
   }
 
   .home-docs__title {
     font-size: 20px;
-    margin-bottom: 16px;
+  }
+
+  .home-docs__toggle {
+    padding: 12px 0;
   }
 
   .home-docs__title svg {
     width: 22px;
     height: 22px;
+  }
+
+  .home-docs__title .home-docs__chev {
+    width: 16px;
+    height: 16px;
   }
 
   .home-docs__grid,
