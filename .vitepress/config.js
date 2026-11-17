@@ -65,7 +65,6 @@ export default defineConfig({
         items: [
           { text: 'Programming with Pixels 论文解读', link: '/articles/programming-with-pixels-cua-software-engineering' },
           { text: 'CUA-SWE 论文解读', link: '/articles/cua-swe-visual-software-engineering' },
-          { text: 'Meta Muse 录入管线', link: '/articles/muse-homework-pipeline' },
         ],
       },
       {
@@ -135,7 +134,6 @@ export default defineConfig({
           items: [
             { text: 'Programming with Pixels：让 AI 看着 IDE 写代码', link: '/articles/programming-with-pixels-cua-software-engineering' },
             { text: 'CUA-SWE：当 AI 智能体遇上视觉软件工程', link: '/articles/cua-swe-visual-software-engineering' },
-            { text: '给麻麻搭一条录入管线：Meta Muse 与错题本', link: '/articles/muse-homework-pipeline' },
           ],
         },
         {
