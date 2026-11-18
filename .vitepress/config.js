@@ -79,6 +79,12 @@ export default defineConfig({
           { text: '霍格沃茨之遗 30 天开荒', link: '/articles/hl-30-day-walkthrough' },
         ],
       },
+      {
+        text: '日语',
+        items: [
+          { text: 'N3 半年攻克计划', link: '/articles/japanese-n3-half-year-plan' },
+        ],
+      },
     ],
 
     sidebar: {
@@ -147,6 +153,13 @@ export default defineConfig({
             { text: '暗黑破坏神 II：龙卷风德鲁伊开荒速查', link: '/articles/d2-tornado-druid-guide' },
             { text: '暗黑破坏神 II：狂乱野蛮人开荒速查', link: '/articles/d2-frenzy-barbarian-guide' },
             { text: '霍格沃茨之遗：三十天均衡开荒路线', link: '/articles/hl-30-day-walkthrough' },
+          ],
+        },
+        {
+          text: '日语',
+          collapsed: false,
+          items: [
+            { text: 'N3 半年攻克计划：从标日初级上册到真题冲刺', link: '/articles/japanese-n3-half-year-plan' },
           ],
         },
       ],

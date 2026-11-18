@@ -43,6 +43,7 @@ const DESC = {
   'd2-tornado-druid-guide': '火风暴转裂地之火，30 级洗点风德，物理与冰冷双重输出。',
   'd2-frenzy-barbarian-guide': '双手挥击开荒，24 级解锁狂乱，双武器近战推进地狱。',
   'hl-30-day-walkthrough': '把主线的等级门槛画成一条阶梯：终章只卡 24 级。30 天逐日流程、天赋 36 点顺序与咒语解锁链。',
+  'japanese-n3-half-year-plan': '多邻国 105 分、标日初级上册过半起步，26 周三阶段攻 N3：每日模板、分项要点与真题使用纪律。',
 }
 
 function firstHeading(src) {
