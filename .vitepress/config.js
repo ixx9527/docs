@@ -51,6 +51,7 @@ export default defineConfig({
           { text: '四上数学 · 第一册（练习卷与讲义）', link: '/articles/mistakes-grade4-math-first' },
           { text: '四上数学 · 第二册（第三单元复习卷）', link: '/articles/mistakes-grade4-math-second' },
           { text: '四上数学 · 2026 年 11 月（逻辑推理 3 条）', link: '/articles/mistakes-grade4-math-2026-11' },
+          { text: '四上数学 · 2026 年 11 月（多维观察与空间想象 5 条）', link: '/articles/mistakes-grade4-math-2026-11-2' },
         ],
       },
       {
@@ -124,6 +125,7 @@ export default defineConfig({
             { text: '四上数学 · 第一册（练习卷与讲义）', link: '/articles/mistakes-grade4-math-first' },
             { text: '四上数学 · 第二册（第三单元复习卷）', link: '/articles/mistakes-grade4-math-second' },
             { text: '四上数学 · 2026 年 11 月（逻辑推理 3 条）', link: '/articles/mistakes-grade4-math-2026-11' },
+            { text: '四上数学 · 2026 年 11 月（多维观察与空间想象 5 条）', link: '/articles/mistakes-grade4-math-2026-11-2' },
           ],
         },
         {
