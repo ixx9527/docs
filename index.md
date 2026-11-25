@@ -6,8 +6,8 @@ hero:
   text: 记录与分享的地方
   tagline: 在夏末的尾巴上，写下值得留下的故事
   image:
-    src: /brand/hero.svg
-    alt: 夏末的积雨云与夕阳
+    src: /brand/hero-cat.svg
+    alt: 线稿猫猫
   actions:
     - theme: brand
       text: 看最新一篇

@@ -118,7 +118,7 @@ function isOpen(name) {
           <path d="M122,12 h7 l-7,7 h7"/>
         </g>
       </svg>
-      <p>猫猫守着这一页</p>
+      <p>今天也辛苦啦</p>
     </footer>
   </div>
 </template>
