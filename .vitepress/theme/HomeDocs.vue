@@ -100,6 +100,26 @@ function isOpen(name) {
         </div>
       </section>
     </div>
+
+    <footer class="home-docs__cat">
+      <svg viewBox="0 0 210 116" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M80,70 C98,44 140,42 158,62 C168,72 170,88 162,96 L66,96"/>
+        <circle cx="56" cy="74" r="24"/>
+        <path d="M34,64 L32,40 L48,51"/>
+        <path d="M64,51 L80,40 L78,64"/>
+        <path d="M44,72 q4,4 8,0"/>
+        <path d="M60,72 q4,4 8,0"/>
+        <path d="M53,78 L59,78 L56,81 Z"/>
+        <path d="M56,81 q-3,4 -6,1"/>
+        <path d="M56,81 q3,4 6,1"/>
+        <path d="M162,94 C178,98 178,106 162,106 C134,108 106,106 96,100 C92,97 94,92 99,92"/>
+        <g style="stroke:var(--sm-accent)" opacity="0.85">
+          <path d="M104,24 h10 l-10,10 h10"/>
+          <path d="M122,12 h7 l-7,7 h7"/>
+        </g>
+      </svg>
+      <p>猫猫守着这一页</p>
+    </footer>
   </div>
 </template>
 
@@ -124,6 +144,30 @@ function isOpen(name) {
 
 .home-docs__section:last-child {
   margin-bottom: 0;
+}
+
+/* 页尾打盹猫：细线稿跟分组标题的虚线同一套语言 */
+.home-docs__cat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 56px;
+  padding-top: 28px;
+  border-top: 2px dashed var(--vp-c-divider);
+  color: var(--vp-c-text-3);
+}
+
+.home-docs__cat svg {
+  width: 168px;
+  height: auto;
+}
+
+.home-docs__cat p {
+  margin: 0;
+  font-family: var(--vp-font-family-heading);
+  font-size: 13.5px;
+  letter-spacing: 1px;
 }
 
 /* 顶部「最近更新」用细项标签，分组标题沿用侧边栏写法 */
@@ -332,6 +376,15 @@ function isOpen(name) {
 
   .home-docs__latest {
     margin-bottom: 40px;
+  }
+
+  .home-docs__cat {
+    margin-top: 40px;
+    padding-top: 22px;
+  }
+
+  .home-docs__cat svg {
+    width: 140px;
   }
 
   .home-docs__section.is-open {
