@@ -125,6 +125,16 @@
 }
 
 /* ---------- 正文排版 ---------- */
+/* 底纹：极淡的猫爪印平铺（线稿、稀疏），亮暗各一张 tile */
+.vp-doc {
+  background-image: url("/brand/paw-tile.svg");
+  background-size: 280px 280px;
+  background-repeat: repeat;
+}
+.dark .vp-doc {
+  background-image: url("/brand/paw-tile-dark.svg");
+}
+
 .vp-doc h1 {
   font-family: var(--vp-font-family-heading);
   font-size: 30px;
